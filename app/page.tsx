@@ -73,9 +73,9 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 md:h-[720px]">
+          <div className="flex md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible gap-6 md:gap-8 md:h-[720px] snap-x snap-mandatory pb-6 md:pb-0 scroll-smooth -mx-6 px-6 md:mx-0 md:px-0 [&::-webkit-scrollbar]:h-[4px] [&::-webkit-scrollbar-track]:bg-[#1C1008]/5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-primary [&::-webkit-scrollbar-thumb]:rounded-full md:[&::-webkit-scrollbar]:hidden">
             {/* Column 1 */}
-            <div className="flex flex-col gap-6 md:gap-8 h-full">
+            <div className="flex flex-col gap-6 md:gap-8 h-auto md:h-full w-[85vw] md:w-auto shrink-0 snap-center">
               {/* Card 1: Text - Apéro dînatoire */}
               <div className="bg-[#2D2520] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[3] transition-transform hover:scale-[1.02] duration-300">
                 <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
@@ -87,7 +87,7 @@ export default function Home() {
               </div>
 
               {/* Card 2: Image - Apéro dînatoire */}
-              <div className="relative rounded-[2.5rem] overflow-hidden flex-[5] group transition-transform hover:scale-[1.02] duration-300">
+              <div className="relative rounded-[2.5rem] overflow-hidden flex-[5] h-60 md:h-auto group transition-transform hover:scale-[1.02] duration-300">
                 <Image
                   src="/apero-dinatoire.webp"
                   alt="Apéro dînatoire par Les Fourneaux de Laurent"
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
 
             {/* Column 2 */}
-            <div className="flex flex-col gap-6 md:gap-8 h-full">
+            <div className="flex flex-col gap-6 md:gap-8 h-auto md:h-full w-[85vw] md:w-auto shrink-0 snap-center">
               {/* Card 3: Text - Brasero */}
               <div className="bg-[#3E454F] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
                 <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
@@ -111,7 +111,7 @@ export default function Home() {
               </div>
 
               {/* Card 4: Image - Brasero */}
-              <div className="relative rounded-[2.5rem] overflow-hidden flex-[3] group transition-transform hover:scale-[1.02] duration-300">
+              <div className="relative rounded-[2.5rem] overflow-hidden flex-[3] h-48 md:h-auto group transition-transform hover:scale-[1.02] duration-300">
                 <Image
                   src="/brasero.webp"
                   alt="Cuisson au Brasero par Les Fourneaux de Laurent"
@@ -133,9 +133,9 @@ export default function Home() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col gap-6 md:gap-8 h-full">
+            <div className="flex flex-col gap-6 md:gap-8 h-auto md:h-full w-[85vw] md:w-auto shrink-0 snap-center">
               {/* Card 6: Image - Vegan */}
-              <div className="relative rounded-[2.5rem] overflow-hidden flex-[3.5] group transition-transform hover:scale-[1.02] duration-300">
+              <div className="relative rounded-[2.5rem] overflow-hidden flex-[3.5] h-56 md:h-auto group transition-transform hover:scale-[1.02] duration-300">
                 <Image
                   src="/vegan.webp"
                   alt="Options végétariennes et végétaliennes"
@@ -156,7 +156,7 @@ export default function Home() {
               </div>
 
               {/* Card 8: Image - Dessert */}
-              <div className="relative rounded-[2.5rem] overflow-hidden flex-[2] group transition-transform hover:scale-[1.02] duration-300">
+              <div className="relative rounded-[2.5rem] overflow-hidden flex-[2] h-40 md:h-auto group transition-transform hover:scale-[1.02] duration-300">
                 <Image
                   src="/dessert.webp"
                   alt="Desserts gourmands faits maison"
@@ -170,9 +170,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Qui est Laurent ? */}
-      <section className="py-0 bg-background overflow-hidden">
-        <div className="container-custom grid grid-cols-1 lg:grid-cols-2 min-h-[600px] rounded-[3rem] overflow-hidden ">
+      <section className="py-12 md:py-20 bg-background overflow-hidden px-4 sm:px-6">
+        <div className="container-custom grid grid-cols-1 lg:grid-cols-2 min-h-[600px] rounded-[3rem] overflow-hidden">
           <div className="relative h-[400px] lg:h-auto">
             <Image
               src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/1000079675-high.jpg"

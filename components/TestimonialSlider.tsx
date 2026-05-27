@@ -125,13 +125,13 @@ export function TestimonialSlider() {
                   }
                 }}
                 className={cn(
-                  "flex flex-col justify-between p-8 md:p-12 rounded-[2.5rem] shrink-0 w-[var(--card-width)] h-[380px] transition-all duration-500 ease-out cursor-pointer",
+                  "flex flex-col justify-between p-6 sm:p-8 md:p-12 rounded-[2.5rem] shrink-0 w-[var(--card-width)] h-[380px] transition-all duration-500 ease-out cursor-pointer",
                   t.bgColorClass,
                   t.textColorClass,
                   isCenter ? "scale-100 opacity-100 z-10" : "scale-90 opacity-100"
                 )}
               >
-                <p className="font-display text-xl md:text-2xl lg:text-[1.65rem] font-medium leading-relaxed italic text-center my-auto">
+                <p className="font-display text-sm sm:text-lg md:text-2xl lg:text-[1.65rem] font-medium leading-relaxed italic text-center my-auto">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-4 justify-center mt-6">

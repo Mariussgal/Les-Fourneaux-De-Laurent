@@ -37,26 +37,26 @@ export function HeroSection({ headline, subline, ctaPrimary, ctaSecondary, backg
           </p>
         )}
 
-        <div className="flex flex-wrap gap-6 items-center">
+        <div className="flex flex-wrap gap-4 sm:gap-6 items-center">
           {ctaPrimary && (
             <a
               href={ctaPrimary.href}
-              className="group flex items-center justify-between gap-6 bg-dark hover:bg-primary text-surface pl-8 pr-3 py-3 rounded-full font-bold text-sm tracking-wider uppercase transition-all shadow-md hover:scale-[1.02] active:scale-[0.98]"
+              className="group flex items-center justify-between gap-3 sm:gap-6 bg-dark hover:bg-primary text-surface pl-5 sm:pl-8 pr-2 sm:pr-3 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-md hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>{ctaPrimary.label}</span>
-              <span className="w-10 h-10 rounded-full bg-surface text-dark flex items-center justify-center transition-transform group-hover:rotate-45">
-                <ArrowUpRight size={18} className="stroke-[2.5]" />
+              <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-surface text-dark flex items-center justify-center transition-transform group-hover:rotate-45 shrink-0">
+                <ArrowUpRight size={16} className="stroke-[2.5] sm:size-[18px]" />
               </span>
             </a>
           )}
           {ctaSecondary && (
             <a
               href={ctaSecondary.href}
-              className="group flex items-center justify-between gap-6 bg-[#E8DDD0] hover:bg-[#FAF7F2] text-dark pl-8 pr-3 py-3 rounded-full font-bold text-sm tracking-wider uppercase transition-all shadow-sm border border-border hover:scale-[1.02] active:scale-[0.98]"
+              className="group flex items-center justify-between gap-3 sm:gap-6 bg-[#E8DDD0] hover:bg-[#FAF7F2] text-dark pl-5 sm:pl-8 pr-2 sm:pr-3 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-sm border border-border hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>{ctaSecondary.label}</span>
-              <span className="w-10 h-10 rounded-full bg-dark text-surface flex items-center justify-center transition-transform group-hover:rotate-45">
-                <ArrowUpRight size={18} className="stroke-[2.5]" />
+              <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-dark text-surface flex items-center justify-center transition-transform group-hover:rotate-45 shrink-0">
+                <ArrowUpRight size={16} className="stroke-[2.5] sm:size-[18px]" />
               </span>
             </a>
           )}
