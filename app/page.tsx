@@ -1,6 +1,5 @@
 import { HeroSection } from "@/components/HeroSection";
 import { Marquee } from "@/components/Marquee";
-import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
 import { WaveDivider } from "@/components/WaveDivider";
 import Image from "next/image";

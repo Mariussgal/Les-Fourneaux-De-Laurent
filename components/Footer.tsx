@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Camera, MessageCircle } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
