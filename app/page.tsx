@@ -89,7 +89,7 @@ export default function Home() {
               {/* Card 2: Image - Apéro dînatoire */}
               <div className="relative rounded-[2.5rem] overflow-hidden flex-[5] group transition-transform hover:scale-[1.02] duration-300">
                 <Image
-                  src="/apéro-dinatoire.webp"
+                  src="/apero-dinatoire.webp"
                   alt="Apéro dînatoire par Les Fourneaux de Laurent"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
