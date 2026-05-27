@@ -33,7 +33,7 @@ export function Footer() {
                   </text>
                 </clipPath>
               </defs>
-              
+
               <g clipPath="url(#laurent-text-clip)">
                 {/* Layer 1: Pink base */}
                 <rect width="1000" height="350" fill="#FCDAD7" />
@@ -70,8 +70,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pt-6 border-t border-border/10">
           {/* Brand Info */}
           <div className="space-y-4 lg:col-span-1">
-            <Link href="/" className="font-display font-bold text-2xl tracking-tight text-surface">
-              Les Fourneaux<br />de Laurent
+            <Link href="/" className="font-display font-bold text-xl tracking-tight text-surface">
+              Les Fourneaux de Laurent
             </Link>
             <p className="text-border/80 font-medium">
               La convivialité à chaque bouchée.
@@ -99,14 +99,6 @@ export function Footer() {
             <div className="text-border/80 space-y-2">
               <p>06 46 86 34 34</p>
               <p>lesfourneauxdelaurent@gmail.com</p>
-            </div>
-            <div className="flex items-center gap-4 pt-2">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 bg-border/10 rounded-full hover:bg-primary transition-colors" aria-label="Instagram">
-                <Camera size={20} />
-              </a>
-              <a href="https://wa.me/33646863434" target="_blank" rel="noopener noreferrer" className="p-2 bg-border/10 rounded-full hover:bg-primary transition-colors" aria-label="WhatsApp">
-                <MessageCircle size={20} />
-              </a>
             </div>
           </div>
 
