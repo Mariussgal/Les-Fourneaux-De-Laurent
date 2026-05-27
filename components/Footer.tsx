@@ -35,27 +35,27 @@ export function Footer() {
               </defs>
 
               <g clipPath="url(#laurent-text-clip)">
-                {/* Layer 1: Pink base */}
-                <rect width="1000" height="350" fill="#FCDAD7" />
+                {/* Layer 1: Champagne mineral base */}
+                <rect width="1000" height="350" fill="#D5C7B8" />
 
-                {/* Layer 2: Mustard Wave sliding */}
+                {/* Layer 2: Weathered wood wave sliding */}
                 <g className="animate-footer-wave-slow">
-                  <path d="M 0 100 Q 250 60, 500 100 T 1000 100 T 1500 100 T 2000 100 L 2000 350 L 0 350 Z" fill="#D4A843" />
+                  <path d="M 0 100 Q 250 60, 500 100 T 1000 100 T 1500 100 T 2000 100 L 2000 350 L 0 350 Z" fill="#8E7B68" />
                 </g>
 
-                {/* Layer 3: Terracotta Wave sliding in reverse */}
+                {/* Layer 3: Brushed steel wave sliding in reverse */}
                 <g className="animate-footer-wave-normal" style={{ animationDirection: "reverse" }}>
-                  <path d="M 0 160 Q 250 120, 500 160 T 1000 160 T 1500 160 T 2000 160 L 2000 350 L 0 350 Z" fill="#C0392B" />
+                  <path d="M 0 160 Q 250 120, 500 160 T 1000 160 T 1500 160 T 2000 160 L 2000 350 L 0 350 Z" fill="#4A453F" />
                 </g>
 
-                {/* Layer 4: Warm Terracotta Clay Wave sliding */}
+                {/* Layer 4: Bronze satin wave sliding */}
                 <g className="animate-footer-wave-fast">
-                  <path d="M 0 220 Q 250 180, 500 220 T 1000 220 T 1500 220 T 2000 220 L 2000 350 L 0 350 Z" fill="#E59866" />
+                  <path d="M 0 220 Q 250 180, 500 220 T 1000 220 T 1500 220 T 2000 220 L 2000 350 L 0 350 Z" fill="#B09B87" />
                 </g>
 
-                {/* Layer 5: Cream Wave sliding in reverse */}
+                {/* Layer 5: Mineral silver wave sliding in reverse */}
                 <g className="animate-footer-wave-slow" style={{ animationDirection: "reverse" }}>
-                  <path d="M 0 280 Q 250 250, 500 280 T 1000 280 T 1500 280 T 2000 280 L 2000 350 L 0 350 Z" fill="#FAF7F2" />
+                  <path d="M 0 280 Q 250 250, 500 280 T 1000 280 T 1500 280 T 2000 280 L 2000 350 L 0 350 Z" fill="#FAF9F6" />
                 </g>
               </g>
             </svg>

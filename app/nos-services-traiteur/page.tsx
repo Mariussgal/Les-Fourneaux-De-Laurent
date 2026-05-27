@@ -9,7 +9,7 @@ export const metadata = {
 export default function ServicesTraiteur() {
   return (
     <>
-      <HeroSection 
+      <HeroSection
         headline={
           <>
             Un traiteur convivial<br />pour vos événements
@@ -24,7 +24,7 @@ export default function ServicesTraiteur() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-dark mb-6 leading-tight">
-                Des événements sur mesure, <br/><span className="text-primary italic">dans la bonne humeur</span>
+                Des événements sur mesure, <br /><span className="text-primary italic">dans la bonne humeur</span>
               </h2>
               <p className="text-xl text-text-muted leading-relaxed mb-8">
                 Les Fourneaux de Laurent vous accompagnent pour tous vos événements : entre amis, en famille, ou entre collègues. L&apos;esprit du sud-ouest, le partage, la convivialité et la bonne humeur sont au rendez-vous !
@@ -69,9 +69,9 @@ export default function ServicesTraiteur() {
         </div>
       </section>
 
-      <section className="section-padding bg-surface">
+      <section className="section-padding bg-background">
         <div className="container-custom max-w-5xl mx-auto">
-          <TestimonialCard 
+          <TestimonialCard
             quote="Très bonne cuisine, tout le monde s'est régalé. Je recommande et je n'hésiterai pas à passer par vous pour un futur événement. Merci encore."
             author="Anais S. (avis Google, 02/11/2025)"
             className="shadow-xl bg-dark text-surface border-none"
@@ -79,16 +79,21 @@ export default function ServicesTraiteur() {
         </div>
       </section>
 
-      <section className="section-padding bg-dark text-center text-surface">
+      <section className="section-padding bg-background text-center text-dark border-t border-border/40">
         <div className="container-custom max-w-4xl mx-auto">
-          <h2 className="font-display font-bold text-5xl md:text-6xl mb-12 tracking-tight">Prêt à régaler vos invités ?</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-2xl font-medium mb-16">
-            <span className="flex items-center gap-3"><span className="text-primary text-3xl">📞</span> 06 46 86 34 34</span>
-            <span className="hidden md:inline text-accent opacity-50">|</span>
-            <span className="flex items-center gap-3"><span className="text-primary text-3xl">📧</span> lesfourneauxdelaurent@gmail.com</span>
+          <h2 className="font-condensed text-5xl md:text-7xl lg:text-8xl mb-12 text-dark uppercase tracking-normal">
+            Prêt à régaler vos invités ?
+          </h2>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-xl md:text-2xl font-medium mb-16 text-text-muted">
+            <span className="flex items-center gap-3">06 46 86 34 34</span>
+            <span className="hidden md:inline text-primary opacity-50">|</span>
+            <span className="flex items-center gap-3">lesfourneauxdelaurent@gmail.com</span>
           </div>
           <div>
-            <a href="/contact" className="bg-primary hover:bg-primary-dark text-surface px-12 py-6 rounded-full font-bold text-xl transition-all inline-block shadow-2xl shadow-primary/20 hover:-translate-y-1">
+            <a
+              href="/contact"
+              className="bg-dark hover:bg-primary text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
+            >
               Demandez un devis personnalisé
             </a>
           </div>

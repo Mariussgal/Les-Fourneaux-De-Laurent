@@ -6,13 +6,13 @@ interface MarqueeProps {
 }
 
 const pillStyles = [
-  "bg-[#4E2D1F] text-[#FAF7F2]", // Brun chocolat
-  "bg-[#FCDAD7] text-[#1C1008]", // Rose pêche doux
-  "bg-[#D4A843] text-[#1C1008]", // Jaune moutarde
-  "bg-[#C0392B] text-[#FAF7F2]", // Rouge brique
-  "bg-[#E8DDD0] text-[#1C1008]", // Crème grisé
-  "bg-[#922B21] text-[#FAF7F2]", // Rouge foncé
-  "bg-[#A0522D] text-[#FAF7F2]", // Sienne
+  "bg-[#2D2520] text-[#FAF9F6]", // Walnut
+  "bg-[#E5E2DC] text-[#2D2824]", // Light Zinc
+  "bg-[#3E454F] text-[#FAF9F6]", // Steel
+  "bg-[#7A624E] text-[#FAF9F6]", // Bronze
+  "bg-[#1E1B18] text-[#FAF9F6]", // Charcoal
+  "bg-[#9E826C] text-[#FAF9F6]", // Brushed Brass
+  "bg-[#64748B] text-[#FAF9F6]", // Slate Gray
 ];
 
 export function Marquee({ items, className }: MarqueeProps) {
@@ -20,7 +20,7 @@ export function Marquee({ items, className }: MarqueeProps) {
   const duplicatedItems = [...items, ...items, ...items, ...items, ...items];
 
   return (
-    <div className={cn("overflow-hidden whitespace-nowrap py-8 bg-[#FAF7F2] flex flex-col gap-4 border-y border-[#1C1008]/10", className)}>
+    <div className={cn("overflow-hidden whitespace-nowrap py-8 bg-background flex flex-col gap-4 border-y border-border", className)}>
       {/* First Row - Left moving */}
       <div className="inline-block animate-marquee-slow w-max">
         <div className="flex gap-4 px-2">

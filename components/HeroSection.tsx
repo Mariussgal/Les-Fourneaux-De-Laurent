@@ -32,7 +32,7 @@ export function HeroSection({ headline, subline, ctaPrimary, ctaSecondary, backg
         </h1>
 
         {subline && (
-          <p className="text-xl md:text-2xl text-text-muted font-medium max-w-2xl mb-12 whitespace-pre-line leading-relaxed">
+          <p className="text-xl md:text-2xl text-dark font-semibold max-w-2xl mb-12 whitespace-pre-line leading-relaxed">
             {subline}
           </p>
         )}

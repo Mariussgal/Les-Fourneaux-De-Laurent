@@ -78,11 +78,11 @@ export default function Home() {
             {/* Column 1 */}
             <div className="flex flex-col gap-6 md:gap-8 h-full">
               {/* Card 1: Text - Apéro dînatoire */}
-              <div className="bg-[#4E2D1F] text-[#FAF7F2] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[3] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF7F2]">
+              <div className="bg-[#2D2520] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[3] transition-transform hover:scale-[1.02] duration-300">
+                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Apéro dînatoire
                 </h3>
-                <p className="text-base md:text-lg text-[#FAF7F2]/80 leading-relaxed font-medium">
+                <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">
                   Un assortiment gourmand de charcuteries fines, fromages artisanaux et pains variés pour un apéritif convivial et savoureux.
                 </p>
               </div>
@@ -102,11 +102,11 @@ export default function Home() {
             {/* Column 2 */}
             <div className="flex flex-col gap-6 md:gap-8 h-full">
               {/* Card 3: Text - Brasero */}
-              <div className="bg-[#D4A843] text-[#1C1008] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#1C1008]">
+              <div className="bg-[#3E454F] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
+                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Brasero
                 </h3>
-                <p className="text-base md:text-lg text-[#1C1008]/80 leading-relaxed font-medium">
+                <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">
                   Découvrez le brasero, élément indispensable pour vous réunir entre amis. Idéal pour la cuisson de la viande, du poisson, des légumes.
                 </p>
               </div>
@@ -123,11 +123,11 @@ export default function Home() {
               </div>
 
               {/* Card 5: Text - Options alternatives */}
-              <div className="bg-[#C0392B] text-[#FAF7F2] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF7F2]">
+              <div className="bg-[#7A624E] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
+                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Options alternatives
                 </h3>
-                <p className="text-base md:text-lg text-[#FAF7F2]/80 leading-relaxed font-medium">
+                <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">
                   Des créations culinaires pensées pour les régimes végétariens, vegan et autres préférences alimentaires, sans compromis sur le goût.
                 </p>
               </div>
@@ -147,11 +147,11 @@ export default function Home() {
               </div>
 
               {/* Card 7: Text - Desserts gourmands */}
-              <div className="bg-[#1C1008] text-[#FAF7F2] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF7F2]">
+              <div className="bg-[#1E1B18] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
+                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Desserts gourmands
                 </h3>
-                <p className="text-base md:text-lg text-[#FAF7F2]/80 leading-relaxed font-medium">
+                <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">
                   Laissez-vous tenter par nos desserts gourmands, créés avec passion pour une touche sucrée et réconfortante en fin de repas.
                 </p>
               </div>
@@ -215,7 +215,7 @@ export default function Home() {
           </p>
           <a
             href="/contact"
-            className="bg-primary hover:bg-primary-dark text-surface px-10 py-5 rounded-full font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:scale-105 inline-block"
+            className="bg-dark hover:bg-primary text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
           >
             Demandez un devis
           </a>
