@@ -28,6 +28,7 @@
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-condensed: var(--font-bebas), sans-serif;
+  --font-cormorant: var(--font-cormorant), ui-serif, Georgia, serif;
 }
 
 body {

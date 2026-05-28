@@ -78,7 +78,7 @@ export default function Home() {
             <div className="flex flex-col gap-6 md:gap-8 h-auto md:h-full w-[85vw] md:w-auto shrink-0 snap-center">
               {/* Card 1: Text - Apéro dînatoire */}
               <div className="bg-[#2D2520] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[3] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
+                <h3 className="font-cormorant font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Apéro dînatoire
                 </h3>
                 <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">
@@ -102,7 +102,7 @@ export default function Home() {
             <div className="flex flex-col gap-6 md:gap-8 h-auto md:h-full w-[85vw] md:w-auto shrink-0 snap-center">
               {/* Card 3: Text - Brasero */}
               <div className="bg-[#3E454F] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
+                <h3 className="font-cormorant font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Brasero
                 </h3>
                 <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">
@@ -123,7 +123,7 @@ export default function Home() {
 
               {/* Card 5: Text - Options alternatives */}
               <div className="bg-[#7A624E] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
+                <h3 className="font-cormorant font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Options alternatives
                 </h3>
                 <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">
@@ -147,7 +147,7 @@ export default function Home() {
 
               {/* Card 7: Text - Desserts gourmands */}
               <div className="bg-[#1E1B18] text-[#FAF9F6] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center flex-[2] transition-transform hover:scale-[1.02] duration-300">
-                <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
+                <h3 className="font-cormorant font-bold text-2xl md:text-3xl lg:text-4xl mb-4 text-[#FAF9F6]">
                   Desserts gourmands
                 </h3>
                 <p className="text-base md:text-lg text-[#FAF9F6]/80 leading-relaxed font-medium">

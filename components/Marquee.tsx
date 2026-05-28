@@ -28,7 +28,7 @@ export function Marquee({ items, className }: MarqueeProps) {
             <span
               key={`row1-${i}`}
               className={cn(
-                "font-display font-bold text-lg md:text-xl lg:text-2xl px-6 py-2.5 rounded-full inline-block shadow-sm",
+                "font-cormorant font-bold text-lg md:text-xl lg:text-2xl px-6 py-2.5 rounded-full inline-block shadow-sm",
                 pillStyles[i % pillStyles.length]
               )}
             >
@@ -39,7 +39,7 @@ export function Marquee({ items, className }: MarqueeProps) {
       </div>
 
       {/* Second Row - Right moving */}
-      <div 
+      <div
         className="inline-block animate-marquee-slow w-max"
         style={{ animationDirection: "reverse" }}
       >
@@ -48,7 +48,7 @@ export function Marquee({ items, className }: MarqueeProps) {
             <span
               key={`row2-${i}`}
               className={cn(
-                "font-display font-bold text-lg md:text-xl lg:text-2xl px-6 py-2.5 rounded-full inline-block shadow-sm",
+                "font-cormorant font-bold text-lg md:text-xl lg:text-2xl px-6 py-2.5 rounded-full inline-block shadow-sm",
                 // Offset the styles of row 2 slightly so colors alternate differently
                 pillStyles[(i + 3) % pillStyles.length]
               )}

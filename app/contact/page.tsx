@@ -20,7 +20,7 @@ export default function Contact() {
             {/* Contact Info */}
             <div className="lg:w-1/3 space-y-16 mt-4">
               <div>
-                <h3 className="font-display font-bold text-3xl text-dark mb-8 border-b border-border pb-4">Informations</h3>
+                <h3 className="font-cormorant font-bold text-3xl text-dark mb-8 border-b border-border pb-4">Informations</h3>
                 <ul className="space-y-8">
                   <li className="flex items-start gap-4">
                     <span className="text-xl text-text font-medium mt-1">lesfourneauxdelaurent@gmail.com</span>
@@ -35,7 +35,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="font-display font-bold text-3xl text-dark mb-8 border-b border-border pb-4">Réseaux Sociaux</h3>
+                <h3 className="font-cormorant font-bold text-3xl text-dark mb-8 border-b border-border pb-4">Réseaux Sociaux</h3>
                 <ul className="space-y-6">
                   <li>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-xl font-bold text-primary hover:text-primary-dark hover:underline transition-colors flex items-center gap-3">

@@ -64,7 +64,7 @@ export function TestimonialSlider() {
   // Handle infinite looping jumps silently after transition ends
   const handleTransitionEnd = () => {
     setIsTransitioning(false);
-    
+
     // If we go below the middle copy range
     if (currentIndex <= 2) {
       setCurrentIndex(currentIndex + testimonials.length);
@@ -89,7 +89,7 @@ export function TestimonialSlider() {
       </h2>
 
       {/* Carousel Track Container */}
-      <div 
+      <div
         className="relative w-full overflow-hidden py-4"
         style={{
           // Define CSS variables for easier responsive calculations
@@ -114,7 +114,7 @@ export function TestimonialSlider() {
         >
           {duplicatedTestimonials.map((t, idx) => {
             const isCenter = idx === currentIndex;
-            
+
             return (
               <motion.div
                 key={idx}
@@ -131,7 +131,7 @@ export function TestimonialSlider() {
                   isCenter ? "scale-100 opacity-100 z-10" : "scale-90 opacity-100"
                 )}
               >
-                <p className="font-display text-sm sm:text-lg md:text-2xl lg:text-[1.65rem] font-medium leading-relaxed italic text-center my-auto">
+                <p className="text-sm sm:text-lg md:text-2xl lg:text-[1.65rem] font-medium leading-relaxed italic text-center my-auto">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-4 justify-center mt-6">

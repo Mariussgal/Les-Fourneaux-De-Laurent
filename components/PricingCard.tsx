@@ -17,12 +17,12 @@ export function PricingCard({ title, description, items, basePrice, className }:
   return (
     <div className={cn("bg-surface rounded-[2rem] p-8 md:p-12 border border-border shadow-sm flex flex-col h-full", className)}>
       <div className="mb-10">
-        <h3 className="font-display font-bold text-2xl lg:text-3xl text-dark mb-4">{title}</h3>
+        <h3 className="font-cormorant font-bold text-2xl lg:text-3xl text-dark mb-4">{title}</h3>
         {description && (
           <p className="text-text-muted leading-relaxed">{description}</p>
         )}
       </div>
-      
+
       {items && items.length > 0 && (
         <ul className="space-y-4 mb-10 flex-grow">
           {items.map((item, index) => (
@@ -38,7 +38,7 @@ export function PricingCard({ title, description, items, basePrice, className }:
       {basePrice && (
         <div className="mt-auto pt-8 border-t border-border/50">
           <p className="text-sm text-text-muted font-bold uppercase tracking-wider mb-2">À partir de</p>
-          <p className="font-display font-bold text-4xl text-primary">{basePrice}</p>
+          <p className=" font-bold text-4xl text-primary">{basePrice}</p>
         </div>
       )}
     </div>

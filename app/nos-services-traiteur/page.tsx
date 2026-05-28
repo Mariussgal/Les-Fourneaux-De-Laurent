@@ -23,8 +23,8 @@ export default function ServicesTraiteur() {
         <div className="container-custom">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-dark mb-6 leading-tight">
-                Des événements sur mesure, <br /><span className="text-primary italic">dans la bonne humeur</span>
+              <h2 className="font-cormorant font-bold text-5xl md:text-6xl lg:text-7xl text-dark mb-6 leading-tight">
+                Des événements sur mesure, <br /><span className="text-primary italic font-medium">dans la bonne humeur</span>
               </h2>
               <p className="text-xl text-text-muted leading-relaxed mb-8">
                 Les Fourneaux de Laurent vous accompagnent pour tous vos événements : entre amis, en famille, ou entre collègues. L&apos;esprit du sud-ouest, le partage, la convivialité et la bonne humeur sont au rendez-vous !
@@ -41,8 +41,8 @@ export default function ServicesTraiteur() {
         <div className="container-custom relative z-10">
           <div className="flex flex-col lg:flex-row-reverse gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-surface mb-6 leading-tight">
-                L&apos;approche conviviale de <span className="text-accent">Laurent</span>
+              <h2 className="font-cormorant font-bold text-5xl md:text-6xl lg:text-7xl text-surface mb-6 leading-tight">
+                L&apos;approche conviviale de <span className="text-accent font-medium">Laurent</span>
               </h2>
               <p className="text-xl text-surface/80 leading-relaxed mb-8">
                 Laurent apporte sa bonne humeur et sa bonhomie à chaque événement. L&apos;animation d&apos;un brasero ou d&apos;un barbecue crée une ambiance unique. Il partage ses recettes et ses secrets de cuisson pour un moment mémorable.
@@ -57,7 +57,7 @@ export default function ServicesTraiteur() {
 
       <section className="section-padding bg-background">
         <div className="container-custom text-center max-w-4xl mx-auto mb-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-dark mb-6">Nos plats et menus savoureux</h2>
+          <h2 className="font-cormorant font-bold text-5xl md:text-6xl lg:text-7xl text-dark mb-6">Nos plats et menus savoureux</h2>
           <p className="text-xl text-text-muted leading-relaxed">
             Savourez nos plats préparés avec des produits frais, locaux et faits maison : côte de bœuf, brochettes de poulet, légumes grillés, tapas, tartinades... Un festival de saveurs pour vos papilles !
           </p>

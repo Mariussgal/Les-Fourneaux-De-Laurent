@@ -16,8 +16,8 @@ export function Footer() {
                     x="50%"
                     y="130"
                     textAnchor="middle"
-                    className="font-display font-black tracking-tighter"
-                    style={{ fontSize: "110px" }}
+                    className="font-cormorant font-bold uppercase tracking-wider"
+                    style={{ fontSize: "115px" }}
                   >
                     LES FOURNEAUX
                   </text>
@@ -25,8 +25,8 @@ export function Footer() {
                     x="50%"
                     y="260"
                     textAnchor="middle"
-                    className="font-display font-black tracking-tighter"
-                    style={{ fontSize: "110px" }}
+                    className="font-cormorant font-bold uppercase tracking-wider"
+                    style={{ fontSize: "115px" }}
                   >
                     DE LAURENT
                   </text>
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
 
           {/* Sub-brand tagline */}
-          <div className="text-center font-display font-bold text-sm sm:text-base md:text-xl lg:text-2xl tracking-widest uppercase text-accent mb-6">
+          <div className="text-center font-sans font-bold text-sm sm:text-base md:text-xl lg:text-2xl tracking-widest uppercase text-accent mb-6">
             Traiteur & Épicerie Fine du Sud-Ouest
           </div>
         </div>
@@ -69,7 +69,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-6 border-t border-border/10">
           {/* Brand Info */}
           <div className="space-y-3 col-span-2 md:col-span-1">
-            <Link href="/" className="font-display font-bold text-base sm:text-lg lg:text-xl tracking-tight text-surface hover:text-accent transition-colors">
+            <Link href="/" className="font-cormorant font-bold text-lg sm:text-xl lg:text-2xl text-surface hover:text-accent transition-colors">
               Les Fourneaux de Laurent
             </Link>
             <p className="text-border/80 font-medium text-xs sm:text-sm">
@@ -82,7 +82,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div className="space-y-3">
-            <h4 className="font-display font-bold text-sm sm:text-base lg:text-lg text-accent">Navigation</h4>
+            <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Navigation</h4>
             <nav className="flex flex-col gap-1.5 text-xs sm:text-sm">
               <Link href="/" className="text-border/80 hover:text-surface transition-colors">Accueil</Link>
               <Link href="/epicerie-fine" className="text-border/80 hover:text-surface transition-colors">Épicerie fine</Link>
@@ -94,7 +94,7 @@ export function Footer() {
 
           {/* Contact & Socials */}
           <div className="space-y-3">
-            <h4 className="font-display font-bold text-sm sm:text-base lg:text-lg text-accent">Contact</h4>
+            <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Contact</h4>
             <div className="text-border/80 space-y-1.5 text-xs sm:text-sm">
               <p>06 46 86 34 34</p>
               <p className="break-all">lesfourneauxdelaurent@gmail.com</p>
@@ -103,7 +103,7 @@ export function Footer() {
 
           {/* Legal Info */}
           <div className="space-y-3 col-span-2 md:col-span-1">
-            <h4 className="font-display font-bold text-sm sm:text-base lg:text-lg text-accent">Informations</h4>
+            <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Informations</h4>
             <p className="text-border/60 text-xs sm:text-sm">
               © 2025–{currentYear} Les Fourneaux de Laurent.
             </p>

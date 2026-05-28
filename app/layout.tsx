@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans, Bebas_Neue } from "next/font/google";
+import { Fraunces, DM_Sans, Bebas_Neue, Cormorant_Garamond } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WaveDivider } from "@/components/WaveDivider";
@@ -24,6 +24,14 @@ const bebasNeue = Bebas_Neue({
   display: "swap",
 });
 
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     template: "%s | Les Fourneaux de Laurent",
@@ -38,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${fraunces.variable} ${dmSans.variable} ${bebasNeue.variable} scroll-smooth`} suppressHydrationWarning>
+    <html lang="fr" className={`${fraunces.variable} ${dmSans.variable} ${bebasNeue.variable} ${cormorant.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col font-sans bg-background text-text selection:bg-primary selection:text-surface">
         <Navbar />
         <main className="flex-grow">{children}</main>
