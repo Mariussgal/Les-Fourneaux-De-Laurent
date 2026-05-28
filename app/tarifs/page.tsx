@@ -53,17 +53,17 @@ export default function Tarifs() {
         </div>
       </section>
 
-      <section className="section-padding bg-dark text-center">
+      <section className="section-padding bg-background text-center border-t border-border/40">
         <div className="container-custom max-w-4xl mx-auto">
-          <h2 className="font-display font-bold text-5xl md:text-6xl mb-8 text-surface tracking-tight">
+          <h2 className="font-condensed text-5xl md:text-7xl lg:text-8xl mb-8 text-dark uppercase tracking-normal">
             Un moment qui vous ressemble
           </h2>
-          <p className="text-xl md:text-2xl text-surface/80 leading-relaxed mb-12">
+          <p className="text-xl md:text-2xl text-text-muted leading-relaxed mb-12 font-medium">
             Chez Les Fourneaux de Laurent, chaque projet est unique, comme vous. Que vous soyez amateur de traditions, curieux de découvertes ou en quête d&apos;alternatives, nous nous adaptons à vos envies. Notre cuisine est modulable, notre écoute est entière. Ici, tout est fait pour créer un moment à votre image, en toute simplicité et avec beaucoup de cœur.
           </p>
           <a
             href="/contact"
-            className="bg-primary hover:bg-primary-dark text-surface px-10 py-5 rounded-full font-bold text-xl transition-all shadow-xl shadow-primary/20 hover:scale-105 inline-block"
+            className="bg-dark hover:bg-primary text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
           >
             Demandez un devis personnalisé
           </a>

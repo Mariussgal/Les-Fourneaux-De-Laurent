@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #FAF7F2;      /* crème chaud, fond principal */
+  --color-background: #FAF9F6;      /* soft mineral parchment background */
   --color-surface: #FFFFFF;
-  --color-primary: #C0392B;         /* rouge brique / terracotta profond */
-  --color-primary-dark: #922B21;
-  --color-accent: #D4A843;          /* or / moutarde, pour les détails */
-  --color-dark: #1C1008;            /* brun très sombre, quasi-noir */
-  --color-dark-section: #1C1008;    /* fond des sections sombres */
-  --color-text: #2C1A0E;            /* brun foncé pour le body */
-  --color-text-muted: #7A5C44;      /* brun moyen pour les sous-titres */
-  --color-border: #E8DDD0;
+  --color-primary: #9E826C;         /* brushed bronze / brass */
+  --color-primary-dark: #7A624E;    /* deep warm bronze */
+  --color-accent: #C5B49F;          /* light steel satin gold / champagne */
+  --color-dark: #1E1B18;            /* charred oak / cast iron black */
+  --color-dark-section: #1E1B18;
+  --color-text: #2D2824;            /* dark steel / wood ash body text */
+  --color-text-muted: #7E7367;      /* weathered bark / slate bronze */
+  --color-border: #E5E2DC;          /* brushed aluminum / zinc gray */
 }
 
 @theme {

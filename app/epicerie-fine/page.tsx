@@ -11,6 +11,7 @@ export default function EpicerieFine() {
       <HeroSection 
         headline="L&apos;épicerie fine du Sud-Ouest"
         subline="Une sélection rigoureuse des meilleurs producteurs du terroir, directement chez vous."
+        backgroundImage="/epicerie-hero.jpg"
       />
 
       {/* Terrines COIN-COIN */}
@@ -79,17 +80,17 @@ export default function EpicerieFine() {
               <h3 className="font-display font-bold text-3xl text-surface mb-4">CUVÉE GAMA GT ROUGE</h3>
               <p className="text-accent font-medium mb-8 text-lg">Cépage : 100% Tannat — Degré : 13,5%</p>
               <ul className="space-y-4 text-lg text-surface/90">
-                <li className="flex justify-between border-b border-border/10 pb-4"><span>Teneur en raisin</span> <span className="text-accent">⭐⭐⭐⭐⭐</span></li>
-                <li className="flex justify-between border-b border-border/10 pb-4"><span>Goût de vin</span> <span className="text-accent">⭐⭐⭐⭐⭐</span></li>
-                <li className="flex justify-between pb-2"><span>Convivialité</span> <span className="text-accent">⭐⭐⭐⭐⭐</span></li>
+                <li className="flex justify-between border-b border-border/10 pb-4"><span>Teneur en raisin</span> <span className="text-accent font-semibold">100%</span></li>
+                <li className="flex justify-between border-b border-border/10 pb-4"><span>Goût de vin</span> <span className="text-accent font-semibold">Excellent</span></li>
+                <li className="flex justify-between pb-2"><span>Convivialité</span> <span className="text-accent font-semibold">Maximum</span></li>
               </ul>
             </div>
             <div className="bg-surface/5 border border-border/10 p-8 md:p-12 rounded-[2rem] hover:bg-surface/10 transition-colors">
               <h3 className="font-display font-bold text-3xl text-surface mb-4">CUVÉE GAMA GT BLANC</h3>
               <p className="text-accent font-medium mb-8 text-lg">Cépages : 90% Gros Manseng – 10% Petit Manseng — Degré : 12%</p>
               <ul className="space-y-4 text-lg text-surface/90">
-                <li className="flex justify-between border-b border-border/10 pb-4"><span>Euphorisant</span> <span className="text-accent">⭐⭐⭐⭐⭐</span></li>
-                <li className="flex justify-between pb-2"><span>Fait dire la vérité</span> <span className="text-accent">⭐⭐⭐⭐⭐</span></li>
+                <li className="flex justify-between border-b border-border/10 pb-4"><span>Euphorisant</span> <span className="text-accent font-semibold">Garanti</span></li>
+                <li className="flex justify-between pb-2"><span>Fait dire la vérité</span> <span className="text-accent font-semibold">100%</span></li>
               </ul>
             </div>
           </div>

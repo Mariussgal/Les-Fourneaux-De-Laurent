@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -17,23 +17,23 @@ const testimonials: Testimonial[] = [
   {
     quote: "Nous avons fait appel à Laurent pour un dîner d'anniversaire à domicile, avec brasero et apéritif, et ce fut une réussite totale ! La viande était d'une qualité exceptionnelle, les légumes étaient frais. Professionnel du début à la fin.",
     author: "Sofia CAPESTRO",
-    bgColorClass: "bg-[#4E2D1F]",
-    textColorClass: "text-[#FAF7F2]",
-    accentColorClass: "bg-[#D4A843]",
+    bgColorClass: "bg-[#2D2520]",
+    textColorClass: "text-[#FAF9F6]",
+    accentColorClass: "bg-[#9E826C]",
   },
   {
     quote: "Prestation pour 50 personnes parfaite. Produits de grande qualité, cuisson géniale et service impeccable. Les tapas en apéritif étaient variés et excellents. L'ensemble de nos invités a été unanime : le goût était présent du début à la fin !",
     author: "Myriam ENAULT",
-    bgColorClass: "bg-[#FCDAD7]",
-    textColorClass: "text-[#1C1008]",
-    accentColorClass: "bg-[#C0392B]",
+    bgColorClass: "bg-[#3E454F]",
+    textColorClass: "text-[#FAF9F6]",
+    accentColorClass: "bg-[#C5B49F]",
   },
   {
     quote: "Très bonne cuisine, tout le monde s'est régalé. Je recommande vivement et je n'hésiterai pas à passer par Laurent pour un futur événement familial ou professionnel. Merci encore pour ce moment chaleureux.",
     author: "Anais S.",
-    bgColorClass: "bg-[#D4A843]",
-    textColorClass: "text-[#1C1008]",
-    accentColorClass: "bg-[#4E2D1F]",
+    bgColorClass: "bg-[#7A624E]",
+    textColorClass: "text-[#FAF9F6]",
+    accentColorClass: "bg-[#E5E2DC]",
   },
 ];
 
@@ -76,9 +76,9 @@ export function TestimonialSlider() {
   };
 
   return (
-    <section className="py-24 bg-[#FAF7F2] text-[#1C1008] relative overflow-hidden flex flex-col items-center">
+    <section className="py-24 bg-background text-dark relative overflow-hidden flex flex-col items-center">
       {/* Badge */}
-      <div className="mb-6 px-5 py-1.5 border border-[#1C1008]/20 rounded-full text-xs font-bold tracking-widest uppercase">
+      <div className="mb-6 px-5 py-1.5 border border-border rounded-full text-xs font-bold tracking-widest uppercase">
         Témoignages
       </div>
 
@@ -125,13 +125,13 @@ export function TestimonialSlider() {
                   }
                 }}
                 className={cn(
-                  "flex flex-col justify-between p-8 md:p-12 rounded-[2.5rem] shrink-0 w-[var(--card-width)] h-[380px] transition-all duration-500 ease-out cursor-pointer",
+                  "flex flex-col justify-between p-6 sm:p-8 md:p-12 rounded-[2.5rem] shrink-0 w-[var(--card-width)] h-[380px] transition-all duration-500 ease-out cursor-pointer",
                   t.bgColorClass,
                   t.textColorClass,
                   isCenter ? "scale-100 opacity-100 z-10" : "scale-90 opacity-100"
                 )}
               >
-                <p className="font-display text-xl md:text-2xl lg:text-[1.65rem] font-medium leading-relaxed italic text-center my-auto">
+                <p className="font-display text-sm sm:text-lg md:text-2xl lg:text-[1.65rem] font-medium leading-relaxed italic text-center my-auto">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-4 justify-center mt-6">
@@ -150,14 +150,14 @@ export function TestimonialSlider() {
       <div className="flex items-center justify-center gap-4 mt-12">
         <button
           onClick={handlePrev}
-          className="w-16 h-16 rounded-full border border-[#1C1008]/20 flex items-center justify-center hover:bg-[#1C1008] hover:text-[#FAF7F2] hover:border-transparent transition-all group active:scale-95"
+          className="w-16 h-16 rounded-full border border-border flex items-center justify-center hover:bg-dark hover:text-surface hover:border-transparent transition-all group active:scale-95"
           aria-label="Témoignage précédent"
         >
           <ArrowLeft className="w-6 h-6 transition-transform group-hover:-translate-x-1" />
         </button>
         <button
           onClick={handleNext}
-          className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-[#FAF7F2] transition-all group active:scale-95"
+          className="w-16 h-16 rounded-full border border-border flex items-center justify-center hover:bg-dark hover:text-surface hover:border-transparent transition-all group active:scale-95"
           aria-label="Témoignage suivant"
         >
           <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />

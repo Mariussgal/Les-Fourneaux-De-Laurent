@@ -37,28 +37,17 @@ export function WaveDivider({
       <div
         className={cn(
           "flex w-[200%] h-full",
-          flip && "transform scale-y-[-1]"
+          flip && "transform scale-y-[-1]",
+          animClass
         )}
       >
-        {/* Two identical waves side-by-side with a 2px overlap to prevent browser subpixel gaps */}
-        <div className={cn("flex w-[calc(50%+2px)] -mr-[2px] h-full shrink-0", animClass)}>
-          <svg
-            viewBox="0 0 1440 80"
-            className={cn("w-full h-full fill-current", toColor)}
-            preserveAspectRatio="none"
-          >
-            <path d="M 0 40 Q 180 0, 360 40 T 720 40 T 1080 40 T 1440 40 L 1440 80 L 0 80 Z" />
-          </svg>
-        </div>
-        <div className={cn("flex w-[calc(50%+2px)] -mr-[2px] h-full shrink-0", animClass)}>
-          <svg
-            viewBox="0 0 1440 80"
-            className={cn("w-full h-full fill-current", toColor)}
-            preserveAspectRatio="none"
-          >
-            <path d="M 0 40 Q 180 0, 360 40 T 720 40 T 1080 40 T 1440 40 L 1440 80 L 0 80 Z" />
-          </svg>
-        </div>
+        <svg
+          viewBox="0 0 2880 80"
+          className={cn("w-full h-full fill-current shrink-0", toColor)}
+          preserveAspectRatio="none"
+        >
+          <path d="M 0 40 Q 180 0, 360 40 T 720 40 T 1080 40 T 1440 40 T 1800 40 T 2160 40 T 2520 40 T 2880 40 L 2880 80 L 0 80 Z" />
+        </svg>
       </div>
     </div>
   );
