@@ -25,7 +25,7 @@ export default function Home() {
 
       <Marquee items={[
         "Brasero", "Apéro dînatoire", "Produits du terroir", "Fait maison",
-        "Esprit Sud-Ouest", "Convivialité", "Épicerie fine", "Événements sur mesure"
+        "Esprit Sud-Ouest", "Convivialité", "Food Truck", "Événements sur mesure"
       ]} />
 
 

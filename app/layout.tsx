@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: "%s | Les Fourneaux de Laurent",
     default: "Les Fourneaux de Laurent | Traiteur du Sud-Ouest en Île-de-France",
   },
-  description: "Traiteur convivial du Sud-Ouest basé à Asnières-sur-Seine. Brasero, apéros dînatoires, épicerie fine et vente de produits régionaux.",
+  description: "Traiteur convivial du Sud-Ouest basé à Asnières-sur-Seine. Brasero, apéros dînatoires, service de Food Truck et événements sur mesure.",
 };
 
 export default function RootLayout({

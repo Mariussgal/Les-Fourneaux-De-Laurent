@@ -8,9 +8,10 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "Accueil", href: "/" },
-  { label: "Épicerie", href: "/epicerie-fine" },
+  { label: "Food Truck", href: "/food-truck" },
   { label: "Traiteur", href: "/nos-services-traiteur" },
   { label: "Tarifs", href: "/tarifs" },
+  { label: "Album", href: "/album" },
   { label: "Contact", href: "/contact" },
 ];
 

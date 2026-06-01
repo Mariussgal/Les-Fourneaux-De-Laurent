@@ -62,7 +62,7 @@ export function Footer() {
 
           {/* Sub-brand tagline */}
           <div className="text-center font-sans font-bold text-sm sm:text-base md:text-xl lg:text-2xl tracking-widest uppercase text-accent mb-6">
-            Traiteur & Épicerie Fine du Sud-Ouest
+            Traiteur & Food Truck du Sud-Ouest
           </div>
         </div>
 
@@ -85,9 +85,10 @@ export function Footer() {
             <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Navigation</h4>
             <nav className="flex flex-col gap-1.5 text-xs sm:text-sm">
               <Link href="/" className="text-border/80 hover:text-surface transition-colors">Accueil</Link>
-              <Link href="/epicerie-fine" className="text-border/80 hover:text-surface transition-colors">Épicerie fine</Link>
+              <Link href="/food-truck" className="text-border/80 hover:text-surface transition-colors">Food Truck</Link>
               <Link href="/nos-services-traiteur" className="text-border/80 hover:text-surface transition-colors">Services traiteur</Link>
               <Link href="/tarifs" className="text-border/80 hover:text-surface transition-colors">Tarifs</Link>
+              <Link href="/album" className="text-border/80 hover:text-surface transition-colors">Album</Link>
               <Link href="/contact" className="text-border/80 hover:text-surface transition-colors">Contact</Link>
             </nav>
           </div>
