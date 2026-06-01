@@ -1,4 +1,3 @@
-import { HeroSection } from "@/components/HeroSection";
 import { PricingCard } from "@/components/PricingCard";
 
 export const metadata = {
@@ -8,17 +7,21 @@ export const metadata = {
 export default function Tarifs() {
   return (
     <>
-      <HeroSection 
-        headline="Plaisirs et Partages"
-        subline="Bienvenue dans l'univers des Fourneaux de Laurent, où chaque plat raconte une histoire et chaque prestation devient un moment unique. Inspirée du Sud-Ouest, notre cuisine est généreuse, conviviale et authentique. Nous mettons un point d'honneur à vous offrir des produits frais, de saison, et un service chaleureux, à votre image."
-        ctaPrimary={{ label: "Demandez un devis", href: "/contact" }}
-        backgroundImage="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/1000099150-high-0fgjn6.jpg"
-      />
 
       <section className="section-padding bg-background relative z-20">
         <div className="container-custom">
+          <div className="text-center max-w-4xl mx-auto mb-16 pt-8">
+            <h1 className="font-condensed text-5xl md:text-7xl lg:text-8xl text-dark mb-6 uppercase tracking-normal">
+              Nos Tarifs
+            </h1>
+            <p className="text-xl md:text-2xl text-text-muted leading-relaxed font-medium mx-auto">
+              Des formules généreuses et conviviales, adaptées à tous vos événements.
+            </p>
+          </div>
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <PricingCard 
+            <PricingCard
               title="Formules à emporter"
               items={[
                 { name: "Hachis parmentier à l'effiloché de canard confit", price: "15 €/pers." },
@@ -28,22 +31,22 @@ export default function Tarifs() {
               ]}
               className="md:col-span-2 lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
             />
-            
-            <PricingCard 
+
+            <PricingCard
               title="Buffet dînatoire ou déjeunatoire"
               description="Assortiment de tapas, plateaux de fromages, plateaux de charcuterie, foccacia garnies, brochettes de crevettes marinées, poulet mariné, mini burger, croque monsieur, assortiments de mignardises sucrées..."
               basePrice="15 €/pers."
               className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
             />
 
-            <PricingCard 
+            <PricingCard
               title="Repas format buffet"
               description="Tapas, planches, légumes grillés ou rôtis, viandes grillées, assortiments de mignardises sucrées..."
               basePrice="25 €/pers."
               className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
             />
 
-            <PricingCard 
+            <PricingCard
               title="Repas service à l'assiette"
               description="Tapas, planches, légumes grillés ou rôtis, viandes grillées, assortiments de mignardises sucrées..."
               basePrice="35 €/pers."
