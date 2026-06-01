@@ -149,21 +149,39 @@ export default function EpicerieFine() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-surface rounded-[2rem] p-8 text-center border border-border shadow-sm hover:-translate-y-2 transition-transform">
               <div className="aspect-square relative mb-8 rounded-[1.5rem] overflow-hidden bg-background">
-                <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/produit-foret-enchante-standard.webp" fill alt="Forêt enchantée" className="object-cover" />
+                <Image
+                  src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/produit-foret-enchante-standard.webp"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  alt="Forêt enchantée"
+                  className="object-cover"
+                />
               </div>
               <h3 className="font-display font-bold text-2xl mb-3 text-dark">Forêt enchantée 110g</h3>
               <p className="text-primary font-bold text-2xl">8,90 €</p>
             </div>
             <div className="bg-surface rounded-[2rem] p-8 text-center border border-border shadow-sm hover:-translate-y-2 transition-transform">
               <div className="aspect-square relative mb-8 rounded-[1.5rem] overflow-hidden bg-background">
-                <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/nounourslait-high-3iyhhj.webp" fill alt="Oursons guimauves" className="object-cover" />
+                <Image
+                  src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/nounourslait-high-3iyhhj.webp"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  alt="Oursons guimauves"
+                  className="object-cover"
+                />
               </div>
               <h3 className="font-display font-bold text-2xl mb-3 text-dark">Oursons guimauves 100g</h3>
               <p className="text-primary font-bold text-2xl">9,90 €</p>
             </div>
             <div className="bg-surface rounded-[2rem] p-8 text-center border border-border shadow-sm hover:-translate-y-2 transition-transform">
               <div className="aspect-square relative mb-8 rounded-[1.5rem] overflow-hidden bg-background">
-                <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/produit-casse-noissette-high-im2ct5.webp" fill alt="Casse noisette" className="object-cover" />
+                <Image
+                  src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/produit-casse-noissette-high-im2ct5.webp"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  alt="Casse noisette"
+                  className="object-cover"
+                />
               </div>
               <h3 className="font-display font-bold text-2xl mb-3 text-dark">Casse noisette 110g</h3>
               <p className="text-primary font-bold text-2xl">8,90 €</p>

@@ -51,6 +51,7 @@ export default function Home() {
                 src="/logo-engagement.png"
                 alt="Les Fourneaux de Laurent Logo"
                 fill
+                sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
                 className="object-contain rounded-[2rem]"
               />
             </div>

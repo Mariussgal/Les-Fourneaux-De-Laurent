@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${fraunces.variable} ${dmSans.variable} ${bebasNeue.variable} ${cormorant.variable} scroll-smooth`} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col font-sans bg-background text-text selection:bg-primary selection:text-surface">
+      <body className="min-h-screen flex flex-col font-sans bg-background text-text selection:bg-primary selection:text-surface" suppressHydrationWarning>
         <Navbar />
         <main className="flex-grow">{children}</main>
         <WaveDivider fromColor="bg-background" toColor="text-dark" />

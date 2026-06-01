@@ -49,7 +49,13 @@ export default function ServicesTraiteur() {
               </p>
             </div>
             <div className="lg:w-1/2 w-full relative h-[600px]">
-              <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-07-24-21-34-48_2db7041c-high.jpg" fill alt="Brasero" className="rounded-[2rem] object-cover shadow-2xl" />
+              <Image
+                src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-07-24-21-34-48_2db7041c-high.jpg"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                alt="Brasero"
+                className="rounded-[2rem] object-cover shadow-2xl"
+              />
             </div>
           </div>
         </div>

@@ -104,7 +104,7 @@ export function Footer() {
           {/* Legal Info */}
           <div className="space-y-3 col-span-2 md:col-span-1">
             <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Informations</h4>
-            <p className="text-border/60 text-xs sm:text-sm">
+            <p className="text-border/60 text-xs sm:text-sm" suppressHydrationWarning>
               © 2025–{currentYear} Les Fourneaux de Laurent.
             </p>
             <div className="pt-2 border-t border-border/10">

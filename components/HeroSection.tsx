@@ -19,6 +19,7 @@ export function HeroSection({ headline, subline, ctaPrimary, ctaSecondary, backg
             src={backgroundImage}
             alt="Hero Background"
             fill
+            sizes="100vw"
             className="object-cover object-center opacity-100"
             priority
           />
