@@ -23,8 +23,9 @@ export default function ServicesTraiteur() {
         <div className="container-custom">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-cormorant font-bold text-5xl md:text-6xl lg:text-7xl text-dark mb-6 leading-tight">
-                Des événements sur mesure, <br /><span className="text-primary italic font-medium">dans la bonne humeur</span>
+              <h2 className="font-condensed text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-dark mb-12 uppercase tracking-normal leading-tight">
+                <span className="block whitespace-nowrap">Des événements sur mesure,</span>
+                <span className="block text-primary italic font-medium whitespace-nowrap">dans la bonne humeur</span>
               </h2>
               <p className="text-xl text-text-muted leading-relaxed mb-8">
                 Les Fourneaux de Laurent vous accompagnent pour tous vos événements : entre amis, en famille, ou entre collègues. L&apos;esprit du sud-ouest, le partage, la convivialité et la bonne humeur sont au rendez-vous !
@@ -37,39 +38,15 @@ export default function ServicesTraiteur() {
         </div>
       </section>
 
-      <section className="section-padding bg-dark text-surface relative overflow-hidden">
-        <div className="container-custom relative z-10">
-          <div className="flex flex-col lg:flex-row-reverse gap-16 items-center">
-            <div className="lg:w-1/2">
-              <h2 className="font-cormorant font-bold text-5xl md:text-6xl lg:text-7xl text-surface mb-6 leading-tight">
-                L&apos;approche conviviale de <span className="text-accent font-medium">Laurent</span>
-              </h2>
-              <p className="text-xl text-surface/80 leading-relaxed mb-8">
-                Laurent apporte sa bonne humeur et sa bonhomie à chaque événement. L&apos;animation d&apos;un brasero ou d&apos;un barbecue crée une ambiance unique. Il partage ses recettes et ses secrets de cuisson pour un moment mémorable.
-              </p>
-            </div>
-            <div className="lg:w-1/2 w-full relative h-[600px]">
-              <Image
-                src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-07-24-21-34-48_2db7041c-high.jpg"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                alt="Brasero"
-                className="rounded-[2rem] object-cover shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section-padding bg-background">
         <div className="container-custom text-center max-w-4xl mx-auto mb-16">
-          <h2 className="font-cormorant font-bold text-5xl md:text-6xl lg:text-7xl text-dark mb-6">Nos plats et menus savoureux</h2>
+          <h2 className="font-condensed text-5xl md:text-7xl lg:text-8xl text-dark mb-12 uppercase tracking-normal">Nos plats et menus savoureux</h2>
           <p className="text-xl text-text-muted leading-relaxed">
             Savourez nos plats préparés avec des produits frais, locaux et faits maison : côte de bœuf, brochettes de poulet, légumes grillés, tapas, tartinades... Un festival de saveurs pour vos papilles !
           </p>
         </div>
         <div className="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-08-31-22-40-58_698a3e71-high.jpg" width={500} height={500} alt="Apéro" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform" />
+          <Image src="/album-photo/20260307_172037.jpg" width={500} height={500} alt="Apéro" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform" />
           <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-08-30-19-56-48_9f2a1391-high.jpg" width={500} height={500} alt="Légumes grillés" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform" />
           <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-08-30-19-57-03_1a0395e8-high.jpg" width={500} height={500} alt="Desserts" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform md:col-span-2 lg:col-span-1" />
         </div>
