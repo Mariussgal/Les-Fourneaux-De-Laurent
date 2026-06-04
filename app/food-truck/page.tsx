@@ -12,7 +12,9 @@ export default function FoodTruck() {
       <HeroSection
         headline="Le Food Truck des Fourneaux"
         subline="Gourmand, chaleureux et convivial : le Sud-Ouest s'invite à tous vos événements grâce à notre food truck privatisable."
-        backgroundImage="/album-photo/999A3365.jpg"
+        backgroundImage="/album-photo/999A3397.jpg"
+        backgroundPosition="object-top"
+        opacityClass="opacity-80"
         ctaPrimary={{ label: "Privatiser le Food Truck", href: "/contact" }}
         ctaSecondary={{ label: "Voir les formules", href: "#formules" }}
       />
@@ -65,50 +67,62 @@ export default function FoodTruck() {
             <span className="px-5 py-1.5 border border-dark/20 rounded-full text-xs font-bold tracking-widest uppercase text-dark">
               Nos menus nomades
             </span>
-            <h2 className="font-condensed text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 text-dark uppercase tracking-normal whitespace-nowrap mt-10">
-              Des formules simples et savoureuses
+            <h2 className="font-condensed text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-8 text-dark uppercase tracking-normal mt-10">
+              Des formules sur mesure
             </h2>
             <p className="text-xl text-text-muted leading-relaxed">
-              Découvrez nos trois formules phares élaborées pour s&apos;adapter à toutes vos envies et tous vos budgets.
+              Chez Les Fourneaux de Laurent, chaque événement mérite son devis personnalisé en fonction de vos besoins. Nous n&apos;imposons pas de formules figées et concevons ensemble une offre sur mesure pour régaler vos convives.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="mb-12 text-center">
+            <p className="text-lg md:text-xl text-text-muted italic">
+              Voici quelques exemples de compositions pour vous inspirer :
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
             <PricingCard
-              title="Formule « Le Canard Chic »"
+              title="Burgers au brasero"
               items={[
-                { name: "Burger Landais (confit de canard, oignons caramélisés, brebis)", price: "Inclus" },
-                { name: "Frites fraîches maison cuites à la graisse de canard", price: "Inclus" },
-                { name: "Dessert au choix (Pastis landais perdu ou cookie artisanal)", price: "Inclus" },
-                { name: "Boisson fraîche locale", price: "Inclus" }
+                { name: "Burger Landais (confit de canard, oignons caramélisés, brebis)" },
+                { name: "Frites fraîches maison cuites à la graisse de canard" },
+                { name: "Dessert gourmand (pastis landais perdu ou cookie)" },
+                { name: "Boisson fraîche locale" }
               ]}
-              basePrice="18 €/pers."
               className="shadow-md hover:-translate-y-2 transition-transform"
             />
 
             <PricingCard
-              title="Formule « Troisième Mi-temps »"
+              title="Viandes grillées au brasero"
               items={[
-                { name: "Véritable Saucisse de Toulouse grillée à la plancha", price: "Inclus" },
-                { name: "Chiffonnade de jambon de pays ou cornet de charcuterie", price: "Inclus" },
-                { name: "Frites fraîches maison et sauces artisanales", price: "Inclus" },
-                { name: "Boisson fraîche locale", price: "Inclus" }
+                { name: "Brochettes de cœurs de canard et aiguillettes marinées" },
+                { name: "Saucisse de Toulouse grillée à la plancha" },
+                { name: "Légumes de saison rôtis & pommes de terre grenailles" },
+                { name: "Boisson fraîche locale" }
               ]}
-              basePrice="15 €/pers."
               className="shadow-md hover:-translate-y-2 transition-transform"
             />
 
             <PricingCard
-              title="Formule « Brasero & Grillades »"
+              title="Formules conviviales"
               items={[
-                { name: "Brochettes de cœurs de canard et aiguillettes marinées", price: "Inclus" },
-                { name: "Légumes de saison rôtis et pommes de terre grenailles", price: "Inclus" },
-                { name: "Dessert gourmand du jour (Gâteau basque ou salade de fruits)", price: "Inclus" },
-                { name: "Boisson fraîche locale", price: "Inclus" }
+                { name: "Planches de charcuteries fines et fromages du terroir" },
+                { name: "Foccacia garnies et tapas chauds ou froids" },
+                { name: "Desserts maison et mignardises sucrées" },
+                { name: "Boisson fraîche locale" }
               ]}
-              basePrice="25 €/pers."
               className="shadow-md hover:-translate-y-2 transition-transform"
             />
+          </div>
+
+          <div className="text-center">
+            <a
+              href="/contact"
+              className="bg-primary hover:bg-dark text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
+            >
+              Demander un devis personnalisé
+            </a>
           </div>
         </div>
       </section>

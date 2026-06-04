@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 interface PricingItem {
   name: string;
-  price: string;
+  price?: string;
 }
 
 interface PricingCardProps {
@@ -28,8 +28,12 @@ export function PricingCard({ title, description, items, basePrice, className }:
           {items.map((item, index) => (
             <li key={index} className="flex justify-between items-baseline gap-4">
               <span className="font-medium text-text">{item.name}</span>
-              <div className="flex-grow border-b-2 border-dotted border-border/60"></div>
-              <span className="font-bold text-primary whitespace-nowrap">{item.price}</span>
+              {item.price && (
+                <>
+                  <div className="flex-grow border-b-2 border-dotted border-border/60"></div>
+                  <span className="font-bold text-primary whitespace-nowrap">{item.price}</span>
+                </>
+              )}
             </li>
           ))}
         </ul>

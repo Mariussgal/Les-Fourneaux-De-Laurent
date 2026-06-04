@@ -58,6 +58,51 @@ export function ContactForm() {
           placeholder="vous@exemple.com"
         />
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <label htmlFor="need" className="block text-sm font-bold text-dark uppercase tracking-wider">Type de besoin</label>
+          <select 
+            id="need" 
+            required 
+            defaultValue=""
+            className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer"
+          >
+            <option value="" disabled hidden>Choisir une option</option>
+            <option value="food-truck">Food Truck</option>
+            <option value="traiteur">Prestation Traiteur</option>
+          </select>
+        </div>
+
+        <div className="space-y-2">
+          <label htmlFor="event" className="block text-sm font-bold text-dark uppercase tracking-wider">Type d&apos;événement</label>
+          <select 
+            id="event" 
+            required 
+            defaultValue=""
+            className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer"
+          >
+            <option value="" disabled hidden>Choisir une option</option>
+            <option value="privé">Privé</option>
+            <option value="pro">Professionnel</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="budget" className="block text-sm font-bold text-dark uppercase tracking-wider">Budget par personne</label>
+        <select 
+          id="budget" 
+          required 
+          defaultValue=""
+          className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer"
+        >
+          <option value="" disabled hidden>Choisir une tranche budgétaire</option>
+          <option value="15-30">Entre 15 et 30 €</option>
+          <option value="30-60">Entre 30 et 60 €</option>
+          <option value="60+">60 € et plus</option>
+        </select>
+      </div>
       
       <div className="space-y-2">
         <label htmlFor="message" className="block text-sm font-bold text-dark uppercase tracking-wider">Message</label>

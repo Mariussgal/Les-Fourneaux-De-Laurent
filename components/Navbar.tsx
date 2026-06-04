@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "Accueil", href: "/" },
+  { label: "Traiteur à domicile", href: "/nos-services-traiteur" },
   { label: "Food Truck", href: "/food-truck" },
-  { label: "Traiteur", href: "/nos-services-traiteur" },
   { label: "Tarifs", href: "/tarifs" },
   { label: "Album", href: "/album" },
   { label: "Contact", href: "/contact" },
@@ -25,7 +25,7 @@ export function Navbar() {
     const controlNavbar = () => {
       if (typeof window !== "undefined") {
         const currentScrollY = window.scrollY;
-        
+
         setIsScrolled(currentScrollY > 20);
 
         if (currentScrollY > lastScrollY && currentScrollY > 100) {

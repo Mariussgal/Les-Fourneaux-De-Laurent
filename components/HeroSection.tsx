@@ -7,9 +7,19 @@ interface HeroSectionProps {
   ctaPrimary?: { label: string; href: string };
   ctaSecondary?: { label: string; href: string };
   backgroundImage?: string;
+  backgroundPosition?: string;
+  opacityClass?: string;
 }
 
-export function HeroSection({ headline, subline, ctaPrimary, ctaSecondary, backgroundImage }: HeroSectionProps) {
+export function HeroSection({ 
+  headline, 
+  subline, 
+  ctaPrimary, 
+  ctaSecondary, 
+  backgroundImage,
+  backgroundPosition = "object-center",
+  opacityClass = "opacity-100"
+}: HeroSectionProps) {
   return (
     <section className="relative min-h-screen flex flex-col justify-center section-padding pt-32 overflow-hidden bg-background">
       {/* Optional Background Image with Overlay */}
@@ -20,7 +30,7 @@ export function HeroSection({ headline, subline, ctaPrimary, ctaSecondary, backg
             alt="Hero Background"
             fill
             sizes="100vw"
-            className="object-cover object-center opacity-100"
+            className={`object-cover ${opacityClass} ${backgroundPosition}`}
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background/20" />
