@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Testimonial {
@@ -11,6 +11,7 @@ interface Testimonial {
   bgColorClass: string;
   textColorClass: string;
   accentColorClass: string;
+  link: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -20,6 +21,7 @@ const testimonials: Testimonial[] = [
     bgColorClass: "bg-[#2D2520]",
     textColorClass: "text-[#FAF9F6]",
     accentColorClass: "bg-[#9E826C]",
+    link: "https://share.google/cZeZyOguYnkIAnpDY",
   },
   {
     quote: "Prestation pour 50 personnes parfaite. Produits de grande qualité, cuisson géniale et service impeccable. Les tapas en apéritif étaient variés et excellents. L'ensemble de nos invités a été unanime : le goût était présent du début à la fin !",
@@ -27,13 +29,15 @@ const testimonials: Testimonial[] = [
     bgColorClass: "bg-[#3E454F]",
     textColorClass: "text-[#FAF9F6]",
     accentColorClass: "bg-[#C5B49F]",
+    link: "https://share.google/kgJB21VCnB8MGAEE9",
   },
   {
-    quote: "Très bonne cuisine, tout le monde s'est régalé. Je recommande vivement et je n'hésiterai pas à passer par Laurent pour un futur événement familial ou professionnel. Merci encore pour ce moment chaleureux.",
-    author: "Anais S.",
+    quote: "Expérience parfaite avec Laurent pour un anniversaire avec 25 personnes début février. Laurent nous a préparé un apéritif sur mesure, puis un délicieux poulet au chorizo avec une sauce à tomber, avant de nous régaler d'un super choix de fromages...",
+    author: "Soriano Amelie",
     bgColorClass: "bg-[#7A624E]",
     textColorClass: "text-[#FAF9F6]",
     accentColorClass: "bg-[#E5E2DC]",
+    link: "https://share.google/RzkJGZ9lsX9PDaisX",
   },
 ];
 
@@ -119,19 +123,31 @@ export function TestimonialSlider() {
               <motion.div
                 key={idx}
                 onClick={() => {
-                  if (idx !== currentIndex && !isTransitioning) {
-                    setIsTransitioning(true);
-                    setCurrentIndex(idx);
+                  if (idx !== currentIndex) {
+                    if (!isTransitioning) {
+                      setIsTransitioning(true);
+                      setCurrentIndex(idx);
+                    }
+                  } else if (t.link) {
+                    window.open(t.link, "_blank", "noopener,noreferrer");
                   }
                 }}
                 className={cn(
-                  "flex flex-col justify-between p-6 sm:p-8 md:p-12 rounded-[2.5rem] shrink-0 w-[var(--card-width)] h-[380px] transition-all duration-500 ease-out cursor-pointer",
+                  "relative group flex flex-col justify-between px-6 py-10 sm:px-8 sm:py-12 md:px-12 md:py-14 rounded-[2.5rem] shrink-0 w-[var(--card-width)] h-auto min-h-[400px] sm:min-h-[430px] md:min-h-[460px] lg:min-h-[480px] transition-all duration-500 ease-out cursor-pointer",
                   t.bgColorClass,
                   t.textColorClass,
-                  isCenter ? "scale-100 opacity-100 z-10" : "scale-90 opacity-100"
+                  isCenter ? "scale-100 opacity-100 z-10 border border-white/5 hover:border-white/20" : "scale-90 opacity-100 border border-transparent"
                 )}
               >
-                <p className="text-sm sm:text-lg md:text-2xl lg:text-[1.65rem] font-medium leading-relaxed italic text-center my-auto">
+                {/* Google review link badge (only visible/interactable when centered) */}
+                {isCenter && t.link && (
+                  <div className="absolute top-6 right-8 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FAF9F6]/10 backdrop-blur-md border border-[#FAF9F6]/10 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#FAF9F6]/85 group-hover:text-[#FAF9F6] group-hover:bg-[#FAF9F6]/20 group-hover:border-[#FAF9F6]/20 transition-all duration-300">
+                    <span>Avis Google</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </div>
+                )}
+
+                <p className="text-sm sm:text-base md:text-xl lg:text-2xl font-medium leading-relaxed italic text-center my-auto">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="flex items-center gap-4 justify-center mt-6">
@@ -166,3 +182,4 @@ export function TestimonialSlider() {
     </section>
   );
 }
+

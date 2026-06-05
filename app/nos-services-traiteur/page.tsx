@@ -55,8 +55,9 @@ export default function ServicesTraiteur() {
       <section className="section-padding bg-background">
         <div className="container-custom max-w-5xl mx-auto">
           <TestimonialCard
-            quote="Très bonne cuisine, tout le monde s'est régalé. Je recommande et je n'hésiterai pas à passer par vous pour un futur événement. Merci encore."
-            author="Anais S. (avis Google, 02/11/2025)"
+            quote="Expérience parfaite avec Laurent pour un anniversaire avec 25 personnes début février. Laurent nous a préparé un apéritif sur mesure, puis un délicieux poulet au chorizo avec une sauce à tomber, avant de nous régaler d'un super choix de fromages.  !"
+            author="Soriano Amelie"
+            link="https://share.google/RzkJGZ9lsX9PDaisX"
             className="shadow-xl bg-dark text-surface border-none"
           />
         </div>
