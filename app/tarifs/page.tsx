@@ -62,33 +62,45 @@ export default function Tarifs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <PricingCard
-              title="Formules à emporter"
-              items={[
-                { name: "Hachis parmentier à l'effiloché de canard confit" },
-                { name: "Butternut rôtis, fêta, miel et poulet marinés" },
-                { name: "Truffades et saucisse de Toulouse" },
-                { name: "Paëlla" }
-              ]}
-              className="md:col-span-2 lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
 
             <PricingCard
               title="Buffet dînatoire ou déjeunatoire"
-              description="Assortiment de tapas, plateaux de fromages, plateaux de charcuterie, foccacia garnies, brochettes de crevettes marinées, poulet mariné, mini burger, croque monsieur, assortiments de mignardises sucrées..."
+              description="Exemple de composition. Tous nos devis et menus sont entièrement personnalisables selon vos envies."
+              items={[
+                { name: "Assortiment de tapas" },
+                { name: "Plateaux de fromages et charcuterie" },
+                { name: "Foccacias garnies" },
+                { name: "Brochettes de crevettes marinées" },
+                { name: "Poulet mariné" },
+                { name: "Mini burger & croque-monsieur" },
+                { name: "Assortiments de mignardises sucrées" }
+              ]}
               className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
             />
 
             <PricingCard
               title="Repas format buffet"
-              description="Tapas, planches, légumes grillés ou rôtis, viandes grillées, assortiments de mignardises sucrées..."
+              description="Exemple de menu. Tous nos devis et menus sont entièrement personnalisables selon vos envies."
+              items={[
+                { name: "Tapas et planches à partager" },
+                { name: "Légumes grillés ou rôtis" },
+                { name: "Viandes grillées" },
+                { name: "Assortiments de mignardises sucrées" }
+              ]}
               className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
             />
 
             <PricingCard
               title="Repas service à l'assiette"
-              description="Tapas, planches, légumes grillés ou rôtis, viandes grillées, assortiments de mignardises sucrées..."
+              description="Exemple de menu. Tous nos devis et menus sont entièrement personnalisables selon vos envies."
+              items={[
+                { name: "Tapas et planches à partager" },
+                { name: "Légumes grillés ou rôtis" },
+                { name: "Viandes grillées" },
+                { name: "Assortiments de mignardises sucrées" }
+              ]}
               className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
             />
           </div>
