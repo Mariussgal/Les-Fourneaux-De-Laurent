@@ -46,7 +46,7 @@ export default function ServicesTraiteur() {
           </p>
         </div>
         <div className="container-custom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Image src="/album-photo/20260307_172037.jpg" width={500} height={500} alt="Apéro" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform" />
+          <Image src="/album-photo/service-traiteur/20260307_172037.jpg" width={500} height={500} alt="Apéro" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform" />
           <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-08-30-19-56-48_9f2a1391-high.jpg" width={500} height={500} alt="Légumes grillés" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform" />
           <Image src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-08-30-19-57-03_1a0395e8-high.jpg" width={500} height={500} alt="Desserts" className="rounded-[2rem] object-cover w-full h-[400px] shadow-sm hover:scale-[1.02] transition-transform md:col-span-2 lg:col-span-1" />
         </div>

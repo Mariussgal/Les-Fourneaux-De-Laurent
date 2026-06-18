@@ -12,7 +12,7 @@ export default function FoodTruck() {
       <HeroSection
         headline="Le Food Truck des Fourneaux"
         subline="Gourmand, chaleureux et convivial : le Sud-Ouest s'invite à tous vos événements grâce à notre food truck privatisable."
-        backgroundImage="/album-photo/999A3397.jpg"
+        backgroundImage="/album-photo/foodtruck/999A3397.jpg"
         backgroundPosition="object-top"
         opacityClass="opacity-80"
         ctaPrimary={{ label: "Privatiser le Food Truck", href: "/contact" }}
@@ -41,7 +41,7 @@ export default function FoodTruck() {
             <div className="lg:w-1/2 grid grid-cols-2 gap-4">
               <div className="relative aspect-square w-full rounded-2xl overflow-hidden shadow-md">
                 <Image
-                  src="/album-photo/RXC01958.jpg"
+                  src="/album-photo/foodtruck/RXC01958.jpg"
                   fill
                   alt="Magrets de canard cuits à la perfection"
                   className="object-cover"
@@ -49,7 +49,7 @@ export default function FoodTruck() {
               </div>
               <div className="relative aspect-square w-full rounded-2xl overflow-hidden shadow-md mt-6">
                 <Image
-                  src="/album-photo/IMG_20260408_202530_026.webp"
+                  src="/album-photo/service-traiteur/IMG_20260408_202530_026.webp"
                   fill
                   alt="Laurent souriant au Food Truck"
                   className="object-cover"
@@ -165,7 +165,7 @@ export default function FoodTruck() {
             </div>
             <div className="lg:w-1/2 w-full relative h-[500px]">
               <Image
-                src="/album-photo/image00014.jpeg"
+                src="/album-photo/service-traiteur/image00014.jpeg"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 alt="Privatisation et buffet Les Fourneaux de Laurent"
