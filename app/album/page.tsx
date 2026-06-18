@@ -1,14 +1,35 @@
 import { Metadata } from "next";
-import { AlbumCarousel } from "@/components/AlbumCarousel";
+import { AlbumGallery } from "@/components/AlbumGallery";
 import { VideoWidget } from "@/components/VideoWidget";
 import { WaveDivider } from "@/components/WaveDivider";
+import fs from "fs";
+import path from "path";
 
 export const metadata: Metadata = {
   title: "L'Album",
   description: "Découvrez les moments chaleureux de nos événements. Brasero convivial, food truck animé, planches gourmandes du Sud-Ouest et esprit rugby en images et vidéos.",
 };
 
+const getImagesFromFolder = (folderName: string) => {
+  try {
+    const dirPath = path.join(process.cwd(), "public", "album-photo", folderName);
+    const files = fs.readdirSync(dirPath);
+    return files
+      .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+      .map((file) => ({
+        src: `/album-photo/${folderName}/${file}`,
+        alt: `Photo de ${folderName}`,
+      }));
+  } catch (error) {
+    console.error(`Error reading ${folderName} folder:`, error);
+    return [];
+  }
+};
+
 export default function AlbumPage() {
+  const foodtruckImages = getImagesFromFolder("foodtruck");
+  const serviceTraiteurImages = getImagesFromFolder("service-traiteur");
+
   return (
     <>
       {/* Intro Header Section */}
@@ -41,11 +62,20 @@ export default function AlbumPage() {
       <section className="bg-dark text-surface py-16 md:py-24 relative overflow-hidden flex flex-col gap-20">
         
         {/* Photos Area */}
-        <div className="container-custom px-6 flex flex-col gap-8">
-          {/* Photo Slider Component */}
-          <div className="w-full">
-            <AlbumCarousel />
+        <div className="container-custom px-6 flex flex-col gap-10 items-center">
+          <div className="text-center max-w-2xl">
+            <span className="px-4 py-1 bg-primary/20 border border-primary/40 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase text-accent mb-4 inline-block">
+              Photographies
+            </span>
+            <h2 className="font-condensed text-4xl md:text-6xl lg:text-7xl uppercase tracking-normal">
+              Nos Univers en Images
+            </h2>
           </div>
+          
+          <AlbumGallery 
+            foodtruckImages={foodtruckImages} 
+            serviceTraiteurImages={serviceTraiteurImages} 
+          />
         </div>
 
         {/* Divider between photos and videos */}

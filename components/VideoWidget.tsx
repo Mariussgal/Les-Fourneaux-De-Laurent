@@ -119,11 +119,20 @@ export function VideoWidget() {
       video.pause();
       setIsPlaying(false);
     } else {
-      video.play().then(() => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((err) => {
+            if (err.name !== "AbortError") {
+              console.error("Playback error:", err);
+            }
+          });
+      } else {
         setIsPlaying(true);
-      }).catch((err) => {
-        console.error("Playback interrupted:", err);
-      });
+      }
     }
   };
 

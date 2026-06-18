@@ -11,49 +11,10 @@ type Category = "all" | "brasero" | "food-truck" | "traiteur" | "cuisine";
 
 interface AlbumImage {
   src: string;
-  category: Category;
   alt: string;
 }
 
-const ALBUM_IMAGES: AlbumImage[] = [
-  // Brasero / Professional Catering (999A series)
-  { src: "/album-photo/999A3269.jpg", category: "traiteur", alt: "Buffet traiteur Les Fourneaux de Laurent" },
-  { src: "/album-photo/999A3281.jpg", category: "traiteur", alt: "Cocktail dînatoire et décorations" },
-  { src: "/album-photo/999A3296.jpg", category: "cuisine", alt: "Pièces cocktail prêtes à servir" },
-  { src: "/album-photo/999A3299.jpg", category: "cuisine", alt: "Détail de canapés traiteur" },
-  { src: "/album-photo/999A3358.jpg", category: "brasero", alt: "Cuisson conviviale au Brasero" },
-  { src: "/album-photo/999A3362.jpg", category: "brasero", alt: "Laurent préparant le Brasero" },
-  { src: "/album-photo/999A3365.jpg", category: "brasero", alt: "Grillades sur plaque Brasero" },
-  { src: "/album-photo/999A3371.jpg", category: "brasero", alt: "Magrets de canard au Brasero" },
-  { src: "/album-photo/999A3374.jpg", category: "brasero", alt: "Ambiance chaleureuse autour du feu" },
-  { src: "/album-photo/999A3379.jpg", category: "traiteur", alt: "Laurent servant ses convives" },
-  { src: "/album-photo/999A3391.jpg", category: "traiteur", alt: "Discussions et convivialité de l'événement" },
-  { src: "/album-photo/999A3393.jpg", category: "traiteur", alt: "Cocktail convivial en plein air" },
-  { src: "/album-photo/999A3397.jpg", category: "traiteur", alt: "La table de fête dressée" },
-  
-  // Food Truck & Live Event snaps
-  { src: "/album-photo/20260307_172037.jpg", category: "food-truck", alt: "Food Truck prêt pour le service" },
-  { src: "/album-photo/20260307_193709.jpg", category: "food-truck", alt: "Ambiance nocturne du Food Truck" },
-  { src: "/album-photo/20260307_201914.jpg", category: "food-truck", alt: "Service des burgers de nuit" },
-  { src: "/album-photo/IMG_20260311_191336_367.jpg", category: "food-truck", alt: "Préparation des frites fraîches" },
-  { src: "/album-photo/IMG_20260311_191339_876.jpg", category: "food-truck", alt: "Burgers sur le gril du Food Truck" },
-  { src: "/album-photo/IMG_20260311_191343_461.jpg", category: "cuisine", alt: "Sauces et garnitures maison" },
-  { src: "/album-photo/IMG_20260311_191354_105.jpg", category: "food-truck", alt: "L'ardoise des formules du jour" },
-  { src: "/album-photo/IMG_20260408_202530_026.webp", category: "food-truck", alt: "Laurent souriant au Food Truck" },
-  { src: "/album-photo/IMG_20260523_014902_368.jpg", category: "food-truck", alt: "Clients rassemblés autour du camion" },
-
-  // Kitchen Preps & Dishes (image0000x series and others)
-  { src: "/album-photo/RXC01958.jpg", category: "cuisine", alt: "Magrets de canard cuits à la perfection" },
-  { src: "/album-photo/RXC01966.jpg", category: "cuisine", alt: "Planches de charcuteries du Sud-Ouest" },
-  { src: "/album-photo/image00002.jpeg", category: "cuisine", alt: "Gâteau basque et desserts du terroir" },
-  { src: "/album-photo/image00006.jpeg", category: "cuisine", alt: "Détail de toasts au foie gras" },
-  { src: "/album-photo/image00008.jpeg", category: "cuisine", alt: "Apéritif aux chandelles" },
-  { src: "/album-photo/image00010.jpeg", category: "cuisine", alt: "Viandes prêtes pour la braise" },
-  { src: "/album-photo/image00014.jpeg", category: "cuisine", alt: "Bouchées festives au chèvre frais" },
-];
-
-
-export function AlbumCarousel() {
+export function AlbumCarousel({ images }: { images: AlbumImage[] }) {
   const [activeIdx, setActiveIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -62,7 +23,7 @@ export function AlbumCarousel() {
   const thumbnailRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const filteredImages = ALBUM_IMAGES;
+  const filteredImages = images;
 
   // Autoplay functionality
   useEffect(() => {
@@ -136,7 +97,9 @@ export function AlbumCarousel() {
     }),
   };
 
-  const currentImage = filteredImages[activeIdx] || ALBUM_IMAGES[0];
+  const currentImage = filteredImages[activeIdx] || filteredImages[0];
+  
+  if (!filteredImages || filteredImages.length === 0) return null;
 
   return (
     <div className="w-full flex flex-col gap-6 select-none">
