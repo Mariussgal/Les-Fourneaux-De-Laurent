@@ -16,28 +16,52 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "Nous avons fait appel à Laurent pour un dîner d'anniversaire à domicile, avec brasero et apéritif, et ce fut une réussite totale ! La viande était d'une qualité exceptionnelle, les légumes étaient frais. Professionnel du début à la fin.",
-    author: "Sofia CAPESTRO",
+    quote: "Super expérience avec Laurent pour un anniversaire. Il nous a préparé un apéritif sur mesure, avec des plateaux de charcuterie et de fromages, des accras et des mini feuilletés de fromage. Des hot-dogs maison avec des patatoes maison cuite dans la graisse de canard. Un vrai régal pour les papilles. Il arrive avec tout son matériel et prépare devant vous. Le tout dans une ambiance conviviale.",
+    author: "Jean maxime vachat",
     bgColorClass: "bg-[#2D2520]",
     textColorClass: "text-[#FAF9F6]",
     accentColorClass: "bg-[#9E826C]",
-    link: "https://share.google/cZeZyOguYnkIAnpDY",
+    link: "https://share.google/aTPiBMxAebU6TsOxN",
   },
   {
-    quote: "Prestation pour 50 personnes parfaite. Produits de grande qualité, cuisson géniale et service impeccable. Les tapas en apéritif étaient variés et excellents. L'ensemble de nos invités a été unanime : le goût était présent du début à la fin !",
-    author: "Myriam ENAULT",
+    quote: "Prestation de qualité. Laurent a réalisé une prestation à mon domicile pour 20 personnes. Produits de qualité, quantité cohérente avec le nombre de convive et tout cela dans la bonne humeur et une grande sympathie. Je recommande les yeux fermés ! 👍🏻",
+    author: "Quentin Legrou",
     bgColorClass: "bg-[#3E454F]",
     textColorClass: "text-[#FAF9F6]",
     accentColorClass: "bg-[#C5B49F]",
-    link: "https://share.google/kgJB21VCnB8MGAEE9",
+    link: "https://share.google/rtBRaDjArGtPVYjYB",
   },
   {
-    quote: "Expérience parfaite avec Laurent pour un anniversaire avec 25 personnes début février. Laurent nous a préparé un apéritif sur mesure, puis un délicieux poulet au chorizo avec une sauce à tomber, avant de nous régaler d'un super choix de fromages...",
-    author: "Soriano Amelie",
+    quote: "Excellente prestation du début à la fin ! Le repas était délicieux, et parfaitement présenté. Tous les invités se sont régalés et ont souligné la qualité du service. Organisation impeccable, ponctualité et grande attention aux détails. Un vrai plaisir d’avoir fait appel à ce traiteur à domicile, je recommande les yeux fermés !",
+    author: "Lisa Coury",
     bgColorClass: "bg-[#7A624E]",
     textColorClass: "text-[#FAF9F6]",
     accentColorClass: "bg-[#E5E2DC]",
-    link: "https://share.google/RzkJGZ9lsX9PDaisX",
+    link: "https://share.google/LdTxwO7eWFhG1tV9E",
+  },
+  {
+    quote: "Fait pour une soixantaine de personnes aujourd'hui malgré un temps couvert..... Qualité, maîtrise des cuissons, sourire et convivialité. Parfait, merci Laurent 👍 au top",
+    author: "Tom de Made",
+    bgColorClass: "bg-[#2D2520]",
+    textColorClass: "text-[#FAF9F6]",
+    accentColorClass: "bg-[#9E826C]",
+    link: "https://share.google/LD8a3K2K7prHdfziy",
+  },
+  {
+    quote: "Très belle prestation, timing nickel, les invités se sont régalés le tout dans la joie et la bonne humeur !! Je recommande chaudement (nous avions pris la formule brasero pour 85 personnes c’était très réussi)",
+    author: "Lucie Guinard",
+    bgColorClass: "bg-[#3E454F]",
+    textColorClass: "text-[#FAF9F6]",
+    accentColorClass: "bg-[#C5B49F]",
+    link: "https://share.google/BCFoIsXY3OiFwWpXJ",
+  },
+  {
+    quote: "Un grand merci aux Fourneaux de Laurent pour leur prestation exceptionnelle ! Un buffet pour 125 personnes. Des produits frais, des saveurs authentiques et une présentation soignée : tout était parfait. Le professionnalisme, la ponctualité et la gentillesse de l'équipe ont largement contribué à la réussite de notre événement. Nous recommandons les yeux fermés ! Bravo et à très bientôt !",
+    author: "christian C",
+    bgColorClass: "bg-[#7A624E]",
+    textColorClass: "text-[#FAF9F6]",
+    accentColorClass: "bg-[#E5E2DC]",
+    link: "https://share.google/HrsDU3pS03MUO9Ul9",
   },
 ];
 
@@ -49,8 +73,8 @@ const duplicatedTestimonials = [
 ];
 
 export function TestimonialSlider() {
-  // Start in the middle copy (index 4 corresponds to Myriam)
-  const [currentIndex, setCurrentIndex] = useState(4);
+  // Start in the middle copy
+  const [currentIndex, setCurrentIndex] = useState(testimonials.length);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handlePrev = () => {
@@ -70,11 +94,11 @@ export function TestimonialSlider() {
     setIsTransitioning(false);
 
     // If we go below the middle copy range
-    if (currentIndex <= 2) {
+    if (currentIndex < testimonials.length) {
       setCurrentIndex(currentIndex + testimonials.length);
     }
     // If we go above the middle copy range
-    else if (currentIndex >= 6) {
+    else if (currentIndex >= testimonials.length * 2) {
       setCurrentIndex(currentIndex - testimonials.length);
     }
   };

@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { Marquee } from "@/components/Marquee";
 import { TestimonialSlider } from "@/components/TestimonialSlider";
+import { TrustedBy } from "@/components/TrustedBy";
 import { WaveDivider } from "@/components/WaveDivider";
 import Image from "next/image";
 
@@ -200,6 +201,9 @@ export default function Home() {
 
       {/* Témoignages clients */}
       <TestimonialSlider />
+
+      {/* Partenaires de confiance */}
+      <TrustedBy />
 
       {/* CTA final */}
       <section className="section-padding bg-background relative text-center">
