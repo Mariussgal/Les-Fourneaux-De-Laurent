@@ -12,7 +12,7 @@ export default function FoodTruck() {
       <HeroSection
         headline="Le Food Truck des Fourneaux"
         subline="Gourmand, chaleureux et convivial : le Sud-Ouest s'invite à tous vos événements grâce à notre food truck privatisable."
-        backgroundImage="/album-photo/foodtruck/999A3397.jpg"
+        backgroundImage="/herosection-foodtruck.webp"
         backgroundPosition="object-top"
         opacityClass="opacity-80"
         ctaPrimary={{ label: "Privatiser le Food Truck", href: "/contact" }}
