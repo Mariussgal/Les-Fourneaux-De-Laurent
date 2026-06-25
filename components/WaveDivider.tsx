@@ -28,7 +28,7 @@ export function WaveDivider({
   return (
     <div
       className={cn(
-        "relative w-full overflow-hidden leading-none z-10 pointer-events-none -mt-[1px]",
+        "relative w-full overflow-hidden leading-none z-10 pointer-events-none -mt-[1px] -mb-[2px]",
         fromColor,
         className
       )}

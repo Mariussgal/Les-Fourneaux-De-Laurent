@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { PricingCard } from "@/components/PricingCard";
+import { MobileMenuSlider } from "@/components/MobileMenuSlider";
 import Image from "next/image";
 
 export const metadata = {
@@ -81,7 +82,7 @@ export default function FoodTruck() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          <MobileMenuSlider>
             <PricingCard
               title="Burgers au brasero"
               items={[
@@ -90,7 +91,7 @@ export default function FoodTruck() {
                 { name: "Dessert gourmand (pastis landais perdu ou cookie)" },
                 { name: "Boisson fraîche locale" }
               ]}
-              className="shadow-md hover:-translate-y-2 transition-transform"
+              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2 h-full"
             />
 
             <PricingCard
@@ -101,7 +102,7 @@ export default function FoodTruck() {
                 { name: "Légumes de saison rôtis & pommes de terre grenailles" },
                 { name: "Boisson fraîche locale" }
               ]}
-              className="shadow-md hover:-translate-y-2 transition-transform"
+              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2 h-full"
             />
 
             <PricingCard
@@ -112,9 +113,9 @@ export default function FoodTruck() {
                 { name: "Desserts maison et mignardises sucrées" },
                 { name: "Boisson fraîche locale" }
               ]}
-              className="shadow-md hover:-translate-y-2 transition-transform"
+              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2 h-full"
             />
-          </div>
+          </MobileMenuSlider>
 
           <div className="text-center">
             <a

@@ -81,12 +81,14 @@ export function TestimonialSlider() {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => prev - 1);
+    setTimeout(() => setIsTransitioning(false), 600); // fallback lock release
   };
 
   const handleNext = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => prev + 1);
+    setTimeout(() => setIsTransitioning(false), 600); // fallback lock release
   };
 
   // Handle infinite looping jumps silently after transition ends
@@ -128,17 +130,35 @@ export function TestimonialSlider() {
         } as React.CSSProperties}
       >
         <motion.div
-          className="flex gap-[var(--card-gap)]"
+          className="flex gap-[var(--card-gap)] touch-pan-y"
           animate={{
             x: `calc(-${currentIndex} * (var(--card-width) + var(--card-gap)) + 50vw - (var(--card-width) / 2))`,
           }}
           transition={
             isTransitioning
               ? { type: "spring", stiffness: 200, damping: 25 }
-              : { duration: 0 } // instant jump for loops
+              : { duration: 0 }
           }
           onAnimationComplete={handleTransitionEnd}
           style={{ width: "max-content" }}
+          onTouchStart={(e) => {
+            const touch = e.touches[0];
+            // Store starting touch position on the element dataset
+            e.currentTarget.dataset.touchStartX = touch.clientX.toString();
+          }}
+          onTouchEnd={(e) => {
+            const touchStartX = e.currentTarget.dataset.touchStartX;
+            if (!touchStartX) return;
+            const touchEndX = e.changedTouches[0].clientX;
+            const deltaX = touchEndX - parseFloat(touchStartX);
+            
+            if (deltaX < -50) {
+              handleNext();
+            } else if (deltaX > 50) {
+              handlePrev();
+            }
+            e.currentTarget.dataset.touchStartX = "";
+          }}
         >
           {duplicatedTestimonials.map((t, idx) => {
             const isCenter = idx === currentIndex;
@@ -187,7 +207,7 @@ export function TestimonialSlider() {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="flex items-center justify-center gap-4 mt-12">
+      <div className="flex items-center justify-center gap-4 mt-12 relative z-20">
         <button
           onClick={handlePrev}
           className="w-16 h-16 rounded-full border border-border flex items-center justify-center hover:bg-dark hover:text-surface hover:border-transparent transition-all group active:scale-95"

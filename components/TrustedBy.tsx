@@ -43,7 +43,7 @@ export function TrustedBy({ className }: TrustedByProps) {
             {duplicatedItems.map((partner, i) => (
               <div
                 key={`partner-${i}`}
-                className="relative flex items-center justify-center w-48 h-24 md:w-56 md:h-28 grayscale hover:grayscale-0 transition-all duration-300 px-4 mix-blend-multiply"
+                className="relative flex items-center justify-center w-48 h-24 md:w-56 md:h-28 md:grayscale hover:grayscale-0 transition-all duration-300 px-4 mix-blend-multiply"
               >
                 {partner.logo ? (
                   <Image

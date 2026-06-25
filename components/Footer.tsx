@@ -4,8 +4,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-surface pt-8 pb-6 px-6 lg:px-24 md:min-h-[300px] flex flex-col justify-between">
-      <div className="container-custom w-full flex-grow flex flex-col justify-between gap-6">
+    <footer className="bg-dark text-surface pt-4 pb-4 md:pt-8 md:pb-6 px-4 md:px-6 lg:px-24 md:min-h-[300px] flex flex-col justify-between -mt-1 relative z-20">
+      <div className="container-custom w-full flex-grow flex flex-col justify-between gap-4 md:gap-6">
         <div>
           {/* Giant Animated Brand Wave Banner */}
           <div className="w-full max-w-5xl mx-auto relative overflow-hidden mb-2 select-none">
@@ -61,29 +61,29 @@ export function Footer() {
           </div>
 
           {/* Sub-brand tagline */}
-          <div className="text-center font-sans font-bold text-sm sm:text-base md:text-xl lg:text-2xl tracking-widest uppercase text-accent mb-6">
+          <div className="text-center font-sans font-bold text-sm sm:text-base md:text-xl lg:text-2xl tracking-widest uppercase text-accent mb-4 md:mb-6">
             Traiteur & Food Truck du Sud-Ouest
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-6 border-t border-border/10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-2 md:gap-8 pt-4 md:pt-6 border-t border-border/10">
           {/* Brand Info */}
-          <div className="space-y-3 col-span-2 md:col-span-1">
+          <div className="hidden md:block space-y-1.5 md:space-y-3 col-span-2 md:col-span-1">
             <Link href="/" className="font-cormorant font-bold text-lg sm:text-xl lg:text-2xl text-surface hover:text-accent transition-colors">
               Les Fourneaux de Laurent
             </Link>
-            <p className="text-border/80 font-medium text-xs sm:text-sm">
+            <p className="text-border/80 font-medium text-xs sm:text-sm leading-snug">
               La convivialité à chaque bouchée.
             </p>
-            <p className="text-border/60 text-xs">
+            <p className="text-border/60 text-[11px] sm:text-xs">
               Asnières-sur-Seine, Île-de-France
             </p>
           </div>
 
           {/* Navigation */}
-          <div className="space-y-3">
+          <div className="space-y-1.5 md:space-y-3 col-span-2 md:col-span-1">
             <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Navigation</h4>
-            <nav className="flex flex-col gap-1.5 text-xs sm:text-sm">
+            <nav className="flex flex-row flex-wrap md:flex-col gap-x-4 gap-y-2 md:gap-1.5 text-[11px] sm:text-sm">
               <Link href="/" className="text-border/80 hover:text-surface transition-colors">Accueil</Link>
               <Link href="/food-truck" className="text-border/80 hover:text-surface transition-colors">Food Truck</Link>
               <Link href="/nos-services-traiteur" className="text-border/80 hover:text-surface transition-colors">Services traiteur</Link>
@@ -94,22 +94,22 @@ export function Footer() {
           </div>
 
           {/* Contact & Socials */}
-          <div className="space-y-3">
+          <div className="space-y-1.5 md:space-y-3 col-span-2 md:col-span-1">
             <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Contact</h4>
-            <div className="text-border/80 space-y-1.5 text-xs sm:text-sm">
+            <div className="text-border/80 space-y-1 md:space-y-1.5 text-[11px] sm:text-sm">
               <p>06 46 86 34 34</p>
               <p className="break-all">lesfourneauxdelaurent@gmail.com</p>
             </div>
           </div>
 
           {/* Legal Info */}
-          <div className="space-y-3 col-span-2 md:col-span-1">
+          <div className="space-y-1.5 md:space-y-3 col-span-2 md:col-span-1">
             <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Informations</h4>
-            <p className="text-border/60 text-xs sm:text-sm" suppressHydrationWarning>
+            <p className="text-border/60 text-[11px] sm:text-sm" suppressHydrationWarning>
               © 2025–{currentYear} Les Fourneaux de Laurent.
             </p>
-            <div className="pt-2 border-t border-border/10">
-              <p className="text-[10px] sm:text-xs text-border/40 italic">
+            <div className="pt-2 md:pt-2 border-t border-border/10">
+              <p className="text-[10px] sm:text-xs text-border/40 italic leading-snug">
                 L&apos;abus d&apos;alcool est dangereux pour la santé, à consommer avec modération.
               </p>
             </div>

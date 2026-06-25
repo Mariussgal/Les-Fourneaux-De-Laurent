@@ -172,23 +172,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-background overflow-hidden px-4 sm:px-6">
-        <div className="container-custom grid grid-cols-1 lg:grid-cols-2 min-h-[600px] rounded-[3rem] overflow-hidden">
-          <div className="relative h-[400px] lg:h-auto">
+      <section className="py-6 md:py-20 bg-background overflow-hidden px-4 sm:px-6">
+        <div className="container-custom grid grid-cols-1 lg:grid-cols-2 min-h-auto lg:min-h-[600px] rounded-[2rem] lg:rounded-[3rem] overflow-hidden">
+          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto">
             <Image
               src="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/1000079675-high.jpg"
               alt="Laurent"
               fill
-              className="object-cover object-top"
+              className="object-cover object-[center_40%] lg:object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
-          <div className="flex flex-col justify-center px-6 py-16 md:px-12 lg:px-24 bg-surface relative">
-            <div className="absolute top-0 left-0 w-3 h-full bg-primary" />
-            <h2 className="font-condensed text-5xl md:text-7xl lg:text-8xl mb-8 text-dark uppercase tracking-normal">
+          <div className="flex flex-col justify-center px-5 py-8 sm:py-12 md:px-12 lg:px-24 bg-surface relative">
+            <div className="absolute top-0 left-0 w-2 lg:w-3 h-full bg-primary" />
+            <h2 className="font-condensed text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-4 lg:mb-8 text-dark uppercase tracking-normal">
               Qui est Laurent ?
             </h2>
-            <p className="text-xl text-text leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-text leading-relaxed">
               Derrière Les Fourneaux de Laurent se cache une passion pour la cuisine
               et le partage. Fort de son expérience, Laurent a créé ce service de traiteur
               pour vous offrir des moments de convivialité et de gourmandise, en toute
