@@ -5,14 +5,46 @@ import { useState } from "react";
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
     
-    // Simulate API call
-    setTimeout(() => {
-      setStatus("success");
-    }, 1500);
+    const target = e.target as typeof e.target & {
+      name: { value: string };
+      email: { value: string };
+      need: { value: string };
+      event: { value: string };
+      budget: { value: string };
+      message: { value: string };
+    };
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/lesfourneauxdelaurent@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nom: target.name.value,
+          Email: target.email.value,
+          Besoin: target.need.value,
+          Evenement: target.event.value,
+          Budget: target.budget.value,
+          Message: target.message.value,
+          _subject: "Nouveau message depuis Les Fourneaux de Laurent !",
+        })
+      });
+
+      if (response.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+      setStatus("error");
+    }
   };
 
   if (status === "success") {
@@ -37,11 +69,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-surface p-4 md:p-12 rounded-3xl md:rounded-[2rem] border border-border shadow-sm space-y-3 md:space-y-6">
+      {status === "error" && (
+        <div className="p-4 bg-red-100 text-red-700 rounded-lg text-sm mb-4">
+          Une erreur s&apos;est produite lors de l&apos;envoi. Veuillez réessayer plus tard.
+        </div>
+      )}
+      
       <div className="space-y-1 md:space-y-2">
         <label htmlFor="name" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Nom complet</label>
         <input 
           type="text" 
           id="name" 
+          name="name"
           required 
           className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark text-sm md:text-base"
           placeholder="Votre nom"
@@ -53,6 +92,7 @@ export function ContactForm() {
         <input 
           type="email" 
           id="email" 
+          name="email"
           required 
           className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark text-sm md:text-base"
           placeholder="vous@exemple.com"
@@ -64,6 +104,7 @@ export function ContactForm() {
           <label htmlFor="need" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Type de besoin</label>
           <select 
             id="need" 
+            name="need"
             required 
             defaultValue=""
             className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer text-sm md:text-base"
@@ -78,6 +119,7 @@ export function ContactForm() {
           <label htmlFor="event" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Type d&apos;événement</label>
           <select 
             id="event" 
+            name="event"
             required 
             defaultValue=""
             className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer text-sm md:text-base"
@@ -93,6 +135,7 @@ export function ContactForm() {
         <label htmlFor="budget" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Budget par personne</label>
         <select 
           id="budget" 
+          name="budget"
           required 
           defaultValue=""
           className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer text-sm md:text-base"
@@ -108,6 +151,7 @@ export function ContactForm() {
         <label htmlFor="message" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Message</label>
         <textarea 
           id="message" 
+          name="message"
           required 
           rows={3}
           className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 resize-none text-dark text-sm md:text-base md:rows-5"
