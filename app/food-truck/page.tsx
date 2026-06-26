@@ -91,7 +91,7 @@ export default function FoodTruck() {
                 { name: "Dessert gourmand (pastis landais perdu ou cookie)" },
                 { name: "Boisson fraîche locale" }
               ]}
-              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2 h-full"
+              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2"
             />
 
             <PricingCard
@@ -102,7 +102,7 @@ export default function FoodTruck() {
                 { name: "Légumes de saison rôtis & pommes de terre grenailles" },
                 { name: "Boisson fraîche locale" }
               ]}
-              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2 h-full"
+              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2"
             />
 
             <PricingCard
@@ -113,7 +113,7 @@ export default function FoodTruck() {
                 { name: "Desserts maison et mignardises sucrées" },
                 { name: "Boisson fraîche locale" }
               ]}
-              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2 h-full"
+              className="shadow-md transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center lg:hover:-translate-y-2"
             />
           </MobileMenuSlider>
 

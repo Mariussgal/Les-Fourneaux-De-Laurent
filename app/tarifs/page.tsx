@@ -1,4 +1,5 @@
 import { PricingCard } from "@/components/PricingCard";
+import { MobileMenuSlider } from "@/components/MobileMenuSlider";
 
 export const metadata = {
   title: "Tarifs",
@@ -19,7 +20,7 @@ export default function Tarifs() {
             </h1>
           </div>
 
-          <div className="bg-surface rounded-[2.5rem] p-8 md:p-16 border border-border/60 shadow-xl max-w-4xl mx-auto">
+          <div className="bg-surface rounded-3xl md:rounded-[2.5rem] p-6 md:p-16 border border-border/60 shadow-xl max-w-4xl mx-auto">
             <div className="space-y-6 text-lg md:text-xl text-text-muted leading-relaxed font-medium">
               <p>
                 Chez Les Fourneaux de Laurent, nous sommes convaincus qu&apos;aucun événement ne ressemble à un autre. Chaque réception, chaque célébration et chaque projet possède sa propre identité, ses envies et ses exigences.
@@ -62,9 +63,7 @@ export default function Tarifs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-
+          <MobileMenuSlider>
             <PricingCard
               title="Buffet dînatoire ou déjeunatoire"
               description="Exemple de composition. Tous nos devis et menus sont entièrement personnalisables selon vos envies."
@@ -77,7 +76,7 @@ export default function Tarifs() {
                 { name: "Mini burger & croque-monsieur" },
                 { name: "Assortiments de mignardises sucrées" }
               ]}
-              className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
+              className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center"
             />
 
             <PricingCard
@@ -89,7 +88,7 @@ export default function Tarifs() {
                 { name: "Viandes grillées" },
                 { name: "Assortiments de mignardises sucrées" }
               ]}
-              className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
+              className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center"
             />
 
             <PricingCard
@@ -101,9 +100,9 @@ export default function Tarifs() {
                 { name: "Viandes grillées" },
                 { name: "Assortiments de mignardises sucrées" }
               ]}
-              className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform"
+              className="lg:col-span-1 shadow-xl hover:-translate-y-2 transition-transform shrink-0 w-[85vw] sm:w-[60vw] lg:w-full snap-center"
             />
-          </div>
+          </MobileMenuSlider>
         </div>
       </section>
     </>

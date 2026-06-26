@@ -15,7 +15,7 @@ interface PricingCardProps {
 
 export function PricingCard({ title, description, items, basePrice, className }: PricingCardProps) {
   return (
-    <div className={cn("bg-surface rounded-[2rem] p-8 md:p-12 border border-border shadow-sm flex flex-col h-full", className)}>
+    <div className={cn("bg-surface rounded-[2rem] p-8 md:p-12 border border-border shadow-sm flex flex-col", className)}>
       <div className="mb-10">
         <h3 className="font-cormorant font-bold text-2xl lg:text-3xl text-dark mb-4">{title}</h3>
         {description && (
