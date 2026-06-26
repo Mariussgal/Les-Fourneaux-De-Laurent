@@ -36,37 +36,37 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-surface p-8 md:p-12 rounded-[2rem] border border-border shadow-sm space-y-6">
-      <div className="space-y-2">
-        <label htmlFor="name" className="block text-sm font-bold text-dark uppercase tracking-wider">Nom complet</label>
+    <form onSubmit={handleSubmit} className="bg-surface p-4 md:p-12 rounded-3xl md:rounded-[2rem] border border-border shadow-sm space-y-3 md:space-y-6">
+      <div className="space-y-1 md:space-y-2">
+        <label htmlFor="name" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Nom complet</label>
         <input 
           type="text" 
           id="name" 
           required 
-          className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark"
+          className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark text-sm md:text-base"
           placeholder="Votre nom"
         />
       </div>
       
-      <div className="space-y-2">
-        <label htmlFor="email" className="block text-sm font-bold text-dark uppercase tracking-wider">Adresse e-mail</label>
+      <div className="space-y-1 md:space-y-2">
+        <label htmlFor="email" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Adresse e-mail</label>
         <input 
           type="email" 
           id="email" 
           required 
-          className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark"
+          className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark text-sm md:text-base"
           placeholder="vous@exemple.com"
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="space-y-2">
-          <label htmlFor="need" className="block text-sm font-bold text-dark uppercase tracking-wider">Type de besoin</label>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
+        <div className="space-y-1 md:space-y-2">
+          <label htmlFor="need" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Type de besoin</label>
           <select 
             id="need" 
             required 
             defaultValue=""
-            className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer"
+            className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer text-sm md:text-base"
           >
             <option value="" disabled hidden>Choisir une option</option>
             <option value="food-truck">Food Truck</option>
@@ -74,13 +74,13 @@ export function ContactForm() {
           </select>
         </div>
 
-        <div className="space-y-2">
-          <label htmlFor="event" className="block text-sm font-bold text-dark uppercase tracking-wider">Type d&apos;événement</label>
+        <div className="space-y-1 md:space-y-2">
+          <label htmlFor="event" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Type d&apos;événement</label>
           <select 
             id="event" 
             required 
             defaultValue=""
-            className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer"
+            className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer text-sm md:text-base"
           >
             <option value="" disabled hidden>Choisir une option</option>
             <option value="privé">Privé</option>
@@ -89,13 +89,13 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div className="space-y-2">
-        <label htmlFor="budget" className="block text-sm font-bold text-dark uppercase tracking-wider">Budget par personne</label>
+      <div className="space-y-1 md:space-y-2">
+        <label htmlFor="budget" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Budget par personne</label>
         <select 
           id="budget" 
           required 
           defaultValue=""
-          className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer"
+          className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 text-dark cursor-pointer text-sm md:text-base"
         >
           <option value="" disabled hidden>Choisir une tranche budgétaire</option>
           <option value="15-30">Entre 15 et 30 €</option>
@@ -104,13 +104,13 @@ export function ContactForm() {
         </select>
       </div>
       
-      <div className="space-y-2">
-        <label htmlFor="message" className="block text-sm font-bold text-dark uppercase tracking-wider">Message</label>
+      <div className="space-y-1 md:space-y-2">
+        <label htmlFor="message" className="block text-xs md:text-sm font-bold text-dark uppercase tracking-wider">Message</label>
         <textarea 
           id="message" 
           required 
-          rows={5}
-          className="w-full px-5 py-4 rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 resize-none text-dark"
+          rows={3}
+          className="w-full px-3 py-2 md:px-5 md:py-4 rounded-lg md:rounded-xl border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors bg-background/50 resize-none text-dark text-sm md:text-base md:rows-5"
           placeholder="Dites-nous en plus sur votre événement..."
         ></textarea>
       </div>
@@ -118,7 +118,7 @@ export function ContactForm() {
       <button 
         type="submit" 
         disabled={status === "loading"}
-        className="w-full bg-primary hover:bg-primary-dark text-surface font-bold py-4 rounded-xl transition-colors disabled:opacity-70 flex justify-center items-center text-lg mt-4 shadow-lg shadow-primary/20"
+        className="w-full bg-primary hover:bg-primary-dark text-surface font-bold py-3 md:py-4 rounded-lg md:rounded-xl transition-colors disabled:opacity-70 flex justify-center items-center text-base md:text-lg mt-2 md:mt-4 shadow-lg shadow-primary/20"
       >
         {status === "loading" ? "Envoi en cours..." : "Envoyer le message"}
       </button>

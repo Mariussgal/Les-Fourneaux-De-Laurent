@@ -62,7 +62,7 @@ export default function AlbumPage() {
       <section className="bg-dark text-surface py-16 md:py-24 relative overflow-hidden flex flex-col gap-20">
         
         {/* Photos Area */}
-        <div className="container-custom px-6 flex flex-col gap-10 items-center">
+        <div className="container-custom px-6 flex flex-col gap-10 items-center overflow-hidden w-full max-w-[100vw]">
           <div className="text-center max-w-2xl">
             <span className="px-4 py-1 bg-primary/20 border border-primary/40 rounded-full text-[10px] md:text-xs font-bold tracking-widest uppercase text-accent mb-4 inline-block">
               Photographies

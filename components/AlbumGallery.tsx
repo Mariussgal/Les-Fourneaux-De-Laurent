@@ -22,11 +22,11 @@ export function AlbumGallery({ foodtruckImages, serviceTraiteurImages }: AlbumGa
   return (
     <div className="w-full flex flex-col gap-10 items-center">
       {/* Tab Selector */}
-      <div className="flex bg-surface/10 p-1.5 rounded-full backdrop-blur-sm border border-surface/20 shadow-xl">
+      <div className="flex bg-surface/10 p-1 md:p-1.5 rounded-full backdrop-blur-sm border border-surface/20 shadow-xl w-full max-w-sm sm:max-w-none sm:w-auto">
         <button
           onClick={() => setActiveCategory("foodtruck")}
           className={cn(
-            "px-6 py-2.5 rounded-full text-sm font-bold tracking-wider uppercase transition-all",
+            "flex-1 sm:flex-none px-2 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase transition-all",
             activeCategory === "foodtruck"
               ? "bg-primary text-surface shadow-md"
               : "text-surface/60 hover:text-surface hover:bg-surface/10"
@@ -37,7 +37,7 @@ export function AlbumGallery({ foodtruckImages, serviceTraiteurImages }: AlbumGa
         <button
           onClick={() => setActiveCategory("traiteur")}
           className={cn(
-            "px-6 py-2.5 rounded-full text-sm font-bold tracking-wider uppercase transition-all",
+            "flex-1 sm:flex-none px-2 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wider uppercase transition-all",
             activeCategory === "traiteur"
               ? "bg-primary text-surface shadow-md"
               : "text-surface/60 hover:text-surface hover:bg-surface/10"

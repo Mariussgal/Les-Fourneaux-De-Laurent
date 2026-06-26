@@ -102,11 +102,11 @@ export function AlbumCarousel({ images }: { images: AlbumImage[] }) {
   if (!filteredImages || filteredImages.length === 0) return null;
 
   return (
-    <div className="w-full flex flex-col gap-6 select-none">
+    <div className="w-full flex flex-col gap-6 select-none overflow-hidden max-w-full">
 
 
       {/* Main Slider Display */}
-      <div className="relative aspect-video w-full max-w-5xl mx-auto rounded-[2rem] overflow-hidden bg-black/40 border border-surface/5 shadow-2xl flex items-center justify-center group/slider">
+      <div className="relative aspect-[4/3] sm:aspect-video w-full max-w-5xl mx-auto rounded-3xl md:rounded-[2rem] overflow-hidden bg-black/40 border border-surface/5 shadow-2xl flex items-center justify-center group/slider">
         {/* Backdrop Blur behind the active image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {currentImage && (
