@@ -33,24 +33,46 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://lesfourneauxdelaurent.fr"),
   title: {
     template: "%s | Les Fourneaux de Laurent",
     default: "Les Fourneaux de Laurent | Traiteur du Sud-Ouest en Île-de-France",
   },
   description: "Traiteur convivial du Sud-Ouest basé à Asnières-sur-Seine. Brasero, apéros dînatoires, service de Food Truck et événements sur mesure.",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Les Fourneaux de Laurent",
+    title: "Les Fourneaux de Laurent | Traiteur du Sud-Ouest en Île-de-France",
+    description: "Traiteur convivial du Sud-Ouest basé à Asnières-sur-Seine. Brasero, apéros dînatoires, service de Food Truck et événements sur mesure.",
     images: [
       {
-        url: "/logo.png",
+        url: "/og-image.jpg",
+        width: 1080,
+        height: 1080,
+        alt: "Les Fourneaux de Laurent – Saveurs des Terroirs",
+      },
+      {
+        url: "/og-banner.jpg",
         width: 1200,
         height: 630,
-        alt: "Les Fourneaux de Laurent Logo",
+        alt: "Les Fourneaux de Laurent – Traiteur du Sud-Ouest en Île-de-France",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/logo.png"],
+    title: "Les Fourneaux de Laurent | Traiteur du Sud-Ouest en Île-de-France",
+    description: "Traiteur convivial du Sud-Ouest basé à Asnières-sur-Seine. Brasero, apéros dînatoires, service de Food Truck et événements sur mesure.",
+    images: ["/og-image.jpg"],
   },
 };
 
