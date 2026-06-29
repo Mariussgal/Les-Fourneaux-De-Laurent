@@ -17,7 +17,7 @@ export default function Home() {
           </>
         }
         subline={"Votre traiteur du Sud-Ouest en Île-de-France.\nProduits frais, faits maison, esprit rugby."}
-        ctaPrimary={{ label: "Réserver un événement", href: "/contact" }}
+        ctaPrimary={{ label: "Réserver un événement", href: "/contact-infos-et-reservations" }}
         ctaSecondary={{ label: "Voir les tarifs", href: "/tarifs" }}
         backgroundImage="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-08-31-22-40-57_29b72a55-high-high.jpg"
       />
@@ -215,7 +215,7 @@ export default function Home() {
             est modulable, notre écoute est entière.
           </p>
           <a
-            href="/contact"
+            href="/contact-infos-et-reservations"
             className="bg-dark hover:bg-primary text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
           >
             Demandez un devis
