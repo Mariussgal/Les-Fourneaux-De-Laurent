@@ -41,7 +41,7 @@ export default function Tarifs() {
                 Contactez-nous pour échanger sur votre projet et recevoir une proposition sur mesure.
               </p>
               <a
-                href="/contact"
+                href="/contact-infos-et-reservations"
                 className="bg-primary hover:bg-dark text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
               >
                 Demander un devis

@@ -88,8 +88,8 @@ export function Footer() {
               <Link href="/food-truck" className="text-border/80 hover:text-surface transition-colors">Food Truck</Link>
               <Link href="/nos-services-traiteur" className="text-border/80 hover:text-surface transition-colors">Services traiteur</Link>
               <Link href="/tarifs" className="text-border/80 hover:text-surface transition-colors">Tarifs</Link>
-              <Link href="/album" className="text-border/80 hover:text-surface transition-colors">Album</Link>
-              <Link href="/contact" className="text-border/80 hover:text-surface transition-colors">Contact</Link>
+              <Link href="/en-images" className="text-border/80 hover:text-surface transition-colors">Album</Link>
+              <Link href="/contact-infos-et-reservations" className="text-border/80 hover:text-surface transition-colors">Contact</Link>
             </nav>
           </div>
 

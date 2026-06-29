@@ -11,8 +11,8 @@ const NAV_LINKS = [
   { label: "Traiteur à domicile", href: "/nos-services-traiteur" },
   { label: "Food Truck", href: "/food-truck" },
   { label: "Tarifs", href: "/tarifs" },
-  { label: "Album", href: "/album" },
-  { label: "Contact", href: "/contact" },
+  { label: "Album", href: "/en-images" },
+  { label: "Contact", href: "/contact-infos-et-reservations" },
 ];
 
 export function Navbar() {

@@ -16,7 +16,7 @@ export default function FoodTruck() {
         backgroundImage="/herosection-foodtruck.webp"
         backgroundPosition="object-top"
         opacityClass="opacity-80"
-        ctaPrimary={{ label: "Privatiser le Food Truck", href: "/contact" }}
+        ctaPrimary={{ label: "Privatiser le Food Truck", href: "/contact-infos-et-reservations" }}
         ctaSecondary={{ label: "Voir les formules", href: "#formules" }}
       />
 
@@ -35,7 +35,7 @@ export default function FoodTruck() {
               <p className="text-lg text-text-muted mb-8 leading-relaxed">
                 Nous préparons sous vos yeux des recettes inspirées du Sud-Ouest, à partir de produits frais et locaux soigneusement sélectionnés. Des burgers gourmands aux frites maison cuites dans la tradition, chaque bouchée est une célébration du partage.
               </p>
-              <a href="/contact" className="bg-primary hover:bg-primary-dark text-surface px-8 py-4 rounded-full font-bold inline-block transition-colors shadow-lg shadow-primary/20">
+              <a href="/contact-infos-et-reservations" className="bg-primary hover:bg-primary-dark text-surface px-8 py-4 rounded-full font-bold inline-block transition-colors shadow-lg shadow-primary/20">
                 Demander un devis
               </a>
             </div>
@@ -119,7 +119,7 @@ export default function FoodTruck() {
 
           <div className="text-center">
             <a
-              href="/contact"
+              href="/contact-infos-et-reservations"
               className="bg-primary hover:bg-dark text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
             >
               Demander un devis personnalisé
@@ -187,7 +187,7 @@ export default function FoodTruck() {
             Contactez-nous dès aujourd&apos;hui pour vérifier nos disponibilités et réserver le food truck pour votre date.
           </p>
           <a
-            href="/contact"
+            href="/contact-infos-et-reservations"
             className="bg-dark hover:bg-primary text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
           >
             Vérifier les disponibilités

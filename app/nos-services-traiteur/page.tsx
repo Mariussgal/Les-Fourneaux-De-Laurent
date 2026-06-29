@@ -77,7 +77,7 @@ export default function ServicesTraiteur() {
           </div>
           <div>
             <a
-              href="/contact"
+              href="/contact-infos-et-reservations"
               className="bg-dark hover:bg-primary text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
             >
               Demandez un devis personnalisé
