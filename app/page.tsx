@@ -5,9 +5,7 @@ import { TrustedBy } from "@/components/TrustedBy";
 import { WaveDivider } from "@/components/WaveDivider";
 import Image from "next/image";
 
-export const metadata = {
-  title: "Accueil",
-};
+
 
 export default function Home() {
   return (

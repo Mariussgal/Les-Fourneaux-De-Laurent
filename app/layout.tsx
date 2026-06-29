@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   description: "Traiteur convivial du Sud-Ouest basé à Asnières-sur-Seine. Brasero, apéros dînatoires, service de Food Truck et événements sur mesure.",
   icons: {
     icon: [
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/logo.jpg", type: "image/jpeg" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/logo.jpg", type: "image/jpeg" },
     ],
   },
   openGraph: {
