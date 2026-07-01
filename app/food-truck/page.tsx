@@ -134,7 +134,7 @@ export default async function FoodTruck() {
           </div>
 
           <MobileMenuSlider>
-            {formulesCards.map((card: any, idx: number) => (
+            {formulesCards.map((card: { title: string; items: readonly { readonly name: string; }[] }, idx: number) => (
               <PricingCard
                 key={idx}
                 title={card.title}
@@ -169,7 +169,7 @@ export default async function FoodTruck() {
               </p>
 
               <div className="space-y-6">
-                {privSteps.map((step: any, i: number) => (
+                {privSteps.map((step: { title: string; description: string }, i: number) => (
                   <div key={i} className="flex gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center font-bold text-accent">{i + 1}</div>
                     <div>
