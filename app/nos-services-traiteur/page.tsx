@@ -1,21 +1,41 @@
 import { HeroSection } from "@/components/HeroSection";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import Image from "next/image";
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
+
+const reader = createReader(process.cwd(), keystaticConfig);
 
 export const metadata = {
   title: "Nos services traiteur",
 };
 
-export default function ServicesTraiteur() {
+export default async function ServicesTraiteur() {
+  const data = await reader.singletons.services.read();
+
+  const heroHeadline = data?.hero?.headline ?? (
+    <>
+      Un traiteur convivial<br />pour vos événements
+    </>
+  );
+  const heroSubline = data?.hero?.subline ?? "Ambiance chaleureuse, produits frais et locaux, cuisine faite maison pour ravir vos convives.";
+
+  const introTitle = data?.intro?.title ?? "Des événements sur mesure,";
+  const introTitleHighlight = data?.intro?.title_highlight ?? "dans la bonne humeur";
+  const introDescription = data?.intro?.description ?? "Les Fourneaux de Laurent vous accompagnent pour tous vos événements : entre amis, en famille, ou entre collègues. L'esprit du sud-ouest, le partage, la convivialité et la bonne humeur sont au rendez-vous !";
+
+  const menuTitle = data?.menu?.title ?? "Nos plats et menus savoureux";
+  const menuDescription = data?.menu?.description ?? "Savourez nos plats préparés avec des produits frais, locaux et faits maison : côte de bœuf, brochettes de poulet, légumes grillés, tapas, tartinades... Un festival de saveurs pour vos papilles !";
+
+  const finalCtaTitle = data?.final_cta?.title ?? "Prêt à régaler vos invités ?";
+  const finalCtaButtonLabel = data?.final_cta?.button_label ?? "Demandez un devis personnalisé";
+  const finalCtaButtonHref = data?.final_cta?.button_href ?? "/contact-infos-et-reservations";
+
   return (
     <>
       <HeroSection
-        headline={
-          <>
-            Un traiteur convivial<br />pour vos événements
-          </>
-        }
-        subline="Ambiance chaleureuse, produits frais et locaux, cuisine faite maison pour ravir vos convives."
+        headline={heroHeadline}
+        subline={heroSubline}
         backgroundImage="https://primary.jwwb.nl/public/y/h/e/temp-unebfxdhrkaeevffnvjl/whatsapp-image-2025-08-31-22-40-58_c0b6fa51-standard-pb3o0i.jpg"
       />
 
@@ -24,11 +44,11 @@ export default function ServicesTraiteur() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-condensed text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-dark mb-12 uppercase tracking-normal leading-tight">
-                <span className="block whitespace-nowrap">Des événements sur mesure,</span>
-                <span className="block text-primary italic font-medium whitespace-nowrap">dans la bonne humeur</span>
+                <span className="block whitespace-nowrap">{introTitle}</span>
+                <span className="block text-primary italic font-medium whitespace-nowrap">{introTitleHighlight}</span>
               </h2>
-              <p className="text-xl text-text-muted leading-relaxed mb-8">
-                Les Fourneaux de Laurent vous accompagnent pour tous vos événements : entre amis, en famille, ou entre collègues. L&apos;esprit du sud-ouest, le partage, la convivialité et la bonne humeur sont au rendez-vous !
+              <p className="text-xl text-text-muted leading-relaxed mb-8 whitespace-pre-line">
+                {introDescription}
               </p>
             </div>
             <div className="lg:w-1/2">
@@ -40,9 +60,9 @@ export default function ServicesTraiteur() {
 
       <section className="section-padding bg-background">
         <div className="container-custom text-center max-w-4xl mx-auto mb-16">
-          <h2 className="font-condensed text-5xl md:text-7xl lg:text-8xl text-dark mb-12 uppercase tracking-normal">Nos plats et menus savoureux</h2>
-          <p className="text-xl text-text-muted leading-relaxed">
-            Savourez nos plats préparés avec des produits frais, locaux et faits maison : côte de bœuf, brochettes de poulet, légumes grillés, tapas, tartinades... Un festival de saveurs pour vos papilles !
+          <h2 className="font-condensed text-5xl md:text-7xl lg:text-8xl text-dark mb-12 uppercase tracking-normal">{menuTitle}</h2>
+          <p className="text-xl text-text-muted leading-relaxed whitespace-pre-line">
+            {menuDescription}
           </p>
         </div>
         <div className="container-custom">
@@ -68,7 +88,7 @@ export default function ServicesTraiteur() {
       <section className="section-padding bg-background text-center text-dark border-t border-border/40">
         <div className="container-custom max-w-4xl mx-auto">
           <h2 className="font-condensed text-5xl md:text-7xl lg:text-8xl mb-12 text-dark uppercase tracking-normal">
-            Prêt à régaler vos invités ?
+            {finalCtaTitle}
           </h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-xl md:text-2xl font-medium mb-16 text-text-muted">
             <span className="flex items-center gap-3">06 46 86 34 34</span>
@@ -77,10 +97,10 @@ export default function ServicesTraiteur() {
           </div>
           <div>
             <a
-              href="/contact-infos-et-reservations"
+              href={finalCtaButtonHref}
               className="bg-dark hover:bg-primary text-surface px-12 py-5 rounded-full font-bold text-lg tracking-wider uppercase transition-all inline-block hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
             >
-              Demandez un devis personnalisé
+              {finalCtaButtonLabel}
             </a>
           </div>
         </div>

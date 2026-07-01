@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 
-const NAV_LINKS = [
+const NAV_LINKS_FALLBACK = [
   { label: "Accueil", href: "/" },
   { label: "Traiteur à domicile", href: "/nos-services-traiteur" },
   { label: "Food Truck", href: "/food-truck" },
@@ -15,7 +15,17 @@ const NAV_LINKS = [
   { label: "Contact", href: "/contact-infos-et-reservations" },
 ];
 
-export function Navbar() {
+interface NavLink {
+  readonly label: string;
+  readonly href: string;
+}
+
+interface NavData {
+  readonly nav_links?: readonly NavLink[];
+}
+
+export function Navbar({ navData }: { navData?: NavData }) {
+  const navLinks = navData?.nav_links ?? NAV_LINKS_FALLBACK;
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -69,7 +79,7 @@ export function Navbar() {
 
         {/* Right Side: Navigation Links as Pills */}
         <nav className="hidden lg:flex items-center gap-3">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link: NavLink) => (
             <Link
               key={link.href}
               href={link.href}
@@ -93,7 +103,7 @@ export function Navbar() {
       {/* Mobile Navigation Dropdown */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-[#FAF7F2] border-b border-[#1C1008]/10 shadow-lg py-6 px-6 flex flex-col gap-3 animate-in fade-in slide-in-from-top-5 duration-200">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link: NavLink) => (
             <Link
               key={link.href}
               href={link.href}

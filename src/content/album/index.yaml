@@ -1,0 +1,20 @@
+intro:
+  badge: "Galerie Souvenirs"
+  title: "L'Album des Fourneaux"
+  quote: "“La cuisine est un prétexte pour se rassembler, rire et partager de bons moments.”"
+  description: "Retrouvez en images et en vidéos l'ambiance unique de nos prestations de traiteur, la convivialité du gril au brasero, et les escales gourmandes de notre Food Truck."
+photos:
+  badge: "Photographies"
+  title: "Nos Univers en Images"
+videos:
+  badge: "En Mouvement"
+  title: "L'Esprit en Vidéo"
+  description: "Découvrez le crépitement du feu, le service des burgers et la joie communicative de nos troisièmes mi-temps en direct."
+final_cta:
+  badge: "Votre Événement"
+  title: "Créons vos souvenirs ensemble"
+  description: "Que ce soit pour un retour de mariage, un anniversaire entre copains ou une fête d'entreprise, nous apportons l'ambiance et le goût du Sud-Ouest directement chez vous."
+  button_1_label: "Demander un devis"
+  button_1_href: "/contact-infos-et-reservations"
+  button_2_label: "Découvrir nos services"
+  button_2_href: "/nos-services-traiteur"

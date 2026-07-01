@@ -1,13 +1,11 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Maximize2, X, Play, Pause } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, X} from "lucide-react";
 import { cn } from "@/lib/utils";
 
-// Category Definitions
-type Category = "all" | "brasero" | "food-truck" | "traiteur" | "cuisine";
 
 interface AlbumImage {
   src: string;
@@ -16,7 +14,7 @@ interface AlbumImage {
 
 export function AlbumCarousel({ images }: { images: AlbumImage[] }) {
   const [activeIdx, setActiveIdx] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [direction, setDirection] = useState(0); // -1 for left, 1 for right
 
@@ -24,6 +22,16 @@ export function AlbumCarousel({ images }: { images: AlbumImage[] }) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const filteredImages = images;
+
+  const handlePrev = useCallback(() => {
+    setDirection(-1);
+    setActiveIdx((prev) => (prev === 0 ? filteredImages.length - 1 : prev - 1));
+  }, [filteredImages.length]);
+
+  const handleNext = useCallback(() => {
+    setDirection(1);
+    setActiveIdx((prev) => (prev === filteredImages.length - 1 ? 0 : prev + 1));
+  }, [filteredImages.length]);
 
   // Autoplay functionality
   useEffect(() => {
@@ -34,7 +42,7 @@ export function AlbumCarousel({ images }: { images: AlbumImage[] }) {
       }, 4000);
     }
     return () => clearInterval(interval);
-  }, [isPlaying, activeIdx, lightboxOpen, filteredImages.length]);
+  }, [isPlaying, lightboxOpen, handleNext]);
 
   // Scroll active thumbnail into center view
   useEffect(() => {
@@ -65,17 +73,7 @@ export function AlbumCarousel({ images }: { images: AlbumImage[] }) {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [activeIdx, lightboxOpen, filteredImages.length]);
-
-  const handlePrev = () => {
-    setDirection(-1);
-    setActiveIdx((prev) => (prev === 0 ? filteredImages.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setDirection(1);
-    setActiveIdx((prev) => (prev === filteredImages.length - 1 ? 0 : prev + 1));
-  };
+  }, [lightboxOpen, handlePrev, handleNext]);
 
   const handleThumbnailClick = (index: number) => {
     setDirection(index > activeIdx ? 1 : -1);
@@ -136,7 +134,7 @@ export function AlbumCarousel({ images }: { images: AlbumImage[] }) {
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.6}
-                onDragEnd={(e, { offset, velocity }) => {
+                onDragEnd={(e, { offset }) => {
                   const swipe = offset.x;
                   if (swipe < -80) {
                     handleNext();

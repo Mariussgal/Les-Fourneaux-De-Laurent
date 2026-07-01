@@ -1,0 +1,39 @@
+intro:
+  badge: "Tarifs & Prestations"
+  title: "Des prestations sur mesure"
+  paragraphs:
+    - "Chez Les Fourneaux de Laurent, nous sommes convaincus qu'aucun événement ne ressemble à un autre. Chaque réception, chaque célébration et chaque projet possède sa propre identité, ses envies et ses exigences."
+    - "Notre ADN repose sur l'écoute, la flexibilité et la personnalisation. Que vous organisiez un mariage, un anniversaire, un événement d'entreprise ou une réception privée, nous adaptons nos prestations à vos attentes, à votre budget et à l'expérience que vous souhaitez offrir à vos convives."
+    - "Parce que chaque demande est unique, nous ne proposons pas de grille tarifaire standardisée. Nos devis sont entièrement personnalisés afin de vous garantir une prestation parfaitement adaptée à votre événement."
+    - "Nous privilégions également la qualité des produits, en mettant à l'honneur les meilleurs producteurs et le terroir français pour vous offrir une expérience authentique et gourmande."
+  contact_text: "Contactez-nous pour échanger sur votre projet et recevoir une proposition sur mesure."
+  button_label: "Demander un devis"
+  button_href: "/contact-infos-et-reservations"
+formules:
+  title: "Nos Formules & Formats de Réception"
+  subtitle: "Découvrez les bases de nos prestations, modulables selon vos envies et vos préférences."
+  cards:
+    - title: "Buffet dînatoire ou déjeunatoire"
+      description: "Exemple de composition. Tous nos devis et menus sont entièrement personnalisables selon vos envies."
+      items:
+        - name: "Assortiment de tapas"
+        - name: "Plateaux de fromages et charcuterie"
+        - name: "Foccacias garnies"
+        - name: "Brochettes de crevettes marinées"
+        - name: "Poulet mariné"
+        - name: "Mini burger & croque-monsieur"
+        - name: "Assortiments de mignardises sucrées"
+    - title: "Repas format buffet"
+      description: "Exemple de menu. Tous nos devis et menus sont entièrement personnalisables selon vos envies."
+      items:
+        - name: "Tapas et planches à partager"
+        - name: "Légumes grillés ou rôtis"
+        - name: "Viandes grillées"
+        - name: "Assortiments de mignardises sucrées"
+    - title: "Repas service à l'assiette"
+      description: "Exemple de menu. Tous nos devis et menus sont entièrement personnalisables selon vos envies."
+      items:
+        - name: "Tapas et planches à partager"
+        - name: "Légumes grillés ou rôtis"
+        - name: "Viandes grillées"
+        - name: "Assortiments de mignardises sucrées"

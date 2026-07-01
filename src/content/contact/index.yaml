@@ -1,0 +1,12 @@
+hero:
+  headline: "Contactez-nous"
+  subline: "Nous sommes fiers de notre adaptabilité et de notre engagement envers l'excellence dans tous les aspects de notre service."
+info_section:
+  title: "Informations"
+  email: "lesfourneauxdelaurent@gmail.com"
+  phone: "06 46 86 34 34"
+  address: "6 rue du Général Mangin,\n92600 Asnières-sur-Seine"
+social_section:
+  title: "Réseaux Sociaux"
+  instagram_handle: "@lesfourneauxdelaurent"
+  whatsapp_text: "WhatsApp : 06 46 86 34 34"

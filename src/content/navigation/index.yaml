@@ -1,0 +1,13 @@
+nav_links:
+  - label: "Accueil"
+    href: "/"
+  - label: "Traiteur à domicile"
+    href: "/nos-services-traiteur"
+  - label: "Food Truck"
+    href: "/food-truck"
+  - label: "Tarifs"
+    href: "/tarifs"
+  - label: "Album"
+    href: "/en-images"
+  - label: "Contact"
+    href: "/contact-infos-et-reservations"

@@ -8,7 +8,7 @@ interface PricingItem {
 interface PricingCardProps {
   title: string;
   description?: string;
-  items?: PricingItem[];
+  items?: readonly PricingItem[];
   basePrice?: string;
   className?: string;
 }

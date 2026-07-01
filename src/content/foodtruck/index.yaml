@@ -1,0 +1,55 @@
+hero:
+  headline: "Le Food Truck des Fourneaux"
+  subline: "Gourmand, chaleureux et convivial : le Sud-Ouest s'invite à tous vos événements grâce à notre food truck privatisable."
+  ctaPrimaryLabel: "Privatiser le Food Truck"
+  ctaPrimaryHref: "/contact-infos-et-reservations"
+  ctaSecondaryLabel: "Voir les formules"
+  ctaSecondaryHref: "#formules"
+concept:
+  title: "Une cuisine nomade, \n"
+  title_highlight: "l'esprit du terroir"
+  description_1: "Apportez de l'originalité et de la convivialité à vos rassemblements. Notre food truck se déplace directement sur le lieu de votre événement en Île-de-France pour régaler vos convives."
+  description_2: "Nous préparons sous vos yeux des recettes inspirées du Sud-Ouest, à partir de produits frais et locaux soigneusement sélectionnés. Des burgers gourmands aux frites maison cuites dans la tradition, chaque bouchée est une célébration du partage."
+  button_label: "Demander un devis"
+  button_href: "/contact-infos-et-reservations"
+formules:
+  badge: "Nos menus nomades"
+  title: "Des formules sur mesure"
+  description: "Chez Les Fourneaux de Laurent, chaque événement mérite son devis personnalisé en fonction de vos besoins. Nous n'imposons pas de formules figées et concevons ensemble une offre sur mesure pour régaler vos convives."
+  subtitle: "Voici quelques exemples de compositions pour vous inspirer :"
+  cards:
+    - title: "Burgers au brasero"
+      items:
+        - name: "Burger Landais (confit de canard, oignons caramélisés, brebis)"
+        - name: "Frites fraîches maison cuites à la graisse de canard"
+        - name: "Dessert gourmand (pastis landais perdu ou cookie)"
+        - name: "Boisson fraîche locale"
+    - title: "Viandes grillées au brasero"
+      items:
+        - name: "Brochettes de cœurs de canard et aiguillettes marinées"
+        - name: "Saucisse de Toulouse grillée à la plancha"
+        - name: "Légumes de saison rôtis & pommes de terre grenailles"
+        - name: "Boisson fraîche locale"
+    - title: "Formules conviviales"
+      items:
+        - name: "Planches de charcuteries fines et fromages du terroir"
+        - name: "Foccacia garnies et tapas chauds ou froids"
+        - name: "Desserts maison et mignardises sucrées"
+        - name: "Boisson fraîche locale"
+  button_label: "Demander un devis personnalisé"
+  button_href: "/contact-infos-et-reservations"
+privatisation:
+  title: "Privatisez pour toutes les occasions"
+  description: "Que ce soit pour un anniversaire, un rebond de mariage, un événement d'entreprise ou un tournoi de rugby, notre food truck s'occupe de tout. Nous apportons notre équipement, notre bonne humeur et notre savoir-faire culinaire pour faire de votre fête une réussite."
+  steps:
+    - title: "Devis sur-mesure"
+      description: "Nous évaluons vos besoins en fonction du nombre d'invités et de l'emplacement."
+    - title: "Choix du menu"
+      description: "Sélectionnez la formule de votre choix ou demandez des ajustements personnalisés (options végétariennes disponibles)."
+    - title: "Service clés en main"
+      description: "Nous installons le food truck, cuisinons en direct et servons vos invités dans une ambiance chaleureuse."
+final_cta:
+  title: "Faites vibrer vos invités"
+  description: "Contactez-nous dès aujourd'hui pour vérifier nos disponibilités et réserver le food truck pour votre date."
+  button_label: "Vérifier les disponibilités"
+  button_href: "/contact-infos-et-reservations"

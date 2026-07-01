@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 interface MarqueeProps {
-  items: string[];
+  items: readonly string[];
   className?: string;
 }
 

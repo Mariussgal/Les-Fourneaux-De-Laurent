@@ -1,7 +1,12 @@
 import Link from "next/link";
 
-export function Footer() {
+export function Footer({ footerData }: { footerData?: { tagline?: string; location?: string; phone?: string; email?: string; legal_text?: string } }) {
   const currentYear = new Date().getFullYear();
+  const tagline = footerData?.tagline ?? "La convivialité à chaque bouchée.";
+  const location = footerData?.location ?? "Asnières-sur-Seine, Île-de-France";
+  const phone = footerData?.phone ?? "06 46 86 34 34";
+  const email = footerData?.email ?? "lesfourneauxdelaurent@gmail.com";
+  const legalText = footerData?.legal_text ?? "L'abus d'alcool est dangereux pour la santé, à consommer avec modération.";
 
   return (
     <footer className="bg-dark text-surface pt-4 pb-4 md:pt-8 md:pb-6 px-4 md:px-6 lg:px-24 md:min-h-[300px] flex flex-col justify-between -mt-1 relative z-20">
@@ -73,10 +78,10 @@ export function Footer() {
               Les Fourneaux de Laurent
             </Link>
             <p className="text-border/80 font-medium text-xs sm:text-sm leading-snug">
-              La convivialité à chaque bouchée.
+              {tagline}
             </p>
             <p className="text-border/60 text-[11px] sm:text-xs">
-              Asnières-sur-Seine, Île-de-France
+              {location}
             </p>
           </div>
 
@@ -97,8 +102,8 @@ export function Footer() {
           <div className="space-y-1.5 md:space-y-3 col-span-2 md:col-span-1">
             <h4 className="font-cormorant font-bold text-sm sm:text-base lg:text-lg hover:text-accent transition-colors">Contact</h4>
             <div className="text-border/80 space-y-1 md:space-y-1.5 text-[11px] sm:text-sm">
-              <p>06 46 86 34 34</p>
-              <p className="break-all">lesfourneauxdelaurent@gmail.com</p>
+              <p>{phone}</p>
+              <p className="break-all">{email}</p>
             </div>
           </div>
 
@@ -110,7 +115,7 @@ export function Footer() {
             </p>
             <div className="pt-2 md:pt-2 border-t border-border/10">
               <p className="text-[10px] sm:text-xs text-border/40 italic leading-snug">
-                L&apos;abus d&apos;alcool est dangereux pour la santé, à consommer avec modération.
+                {legalText}
               </p>
             </div>
           </div>

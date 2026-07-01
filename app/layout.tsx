@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans, Bebas_Neue, Cormorant_Garamond } from "next/font/google";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { WaveDivider } from "@/components/WaveDivider";
+import { LayoutWrapper } from "@/components/LayoutWrapper";
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../keystatic.config';
 import "./globals.css";
+
+const reader = createReader(process.cwd(), keystaticConfig);
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -76,18 +78,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navData = await reader.singletons.navigation.read();
+  const footerData = await reader.singletons.footer.read();
+
   return (
     <html lang="fr" className={`${fraunces.variable} ${dmSans.variable} ${bebasNeue.variable} ${cormorant.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col font-sans bg-background text-text selection:bg-primary selection:text-surface" suppressHydrationWarning>
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <WaveDivider fromColor="bg-background" toColor="text-dark" />
-        <Footer />
+        <LayoutWrapper navData={navData ?? undefined} footerData={footerData ?? undefined}>
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );
