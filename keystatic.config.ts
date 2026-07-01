@@ -1,9 +1,7 @@
 import { config, fields, singleton } from '@keystatic/core';
 
 export default config({
-  storage: process.env.NODE_ENV === 'development'
-    ? { kind: 'local' }
-    : {
+  storage: {
         kind: 'github',
         repo: {
           owner: 'Mariussgal',
