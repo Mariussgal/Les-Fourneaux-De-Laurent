@@ -2,15 +2,23 @@ hero:
   headline: |-
     Un traiteur convivial
     pour vos événements
-  subline: "Ambiance chaleureuse, produits frais et locaux, cuisine faite maison pour ravir vos convives."
+  subline: >-
+    Ambiance chaleureuse, produits frais et locaux, cuisine faite maison pour
+    ravir vos convives.
 intro:
-  title: "Des événements sur mesure,"
-  title_highlight: "dans la bonne humeur"
-  description: "Les Fourneaux de Laurent vous accompagnent pour tous vos événements : entre amis, en famille, ou entre collègues. L'esprit du sud-ouest, le partage, la convivialité et la bonne humeur sont au rendez-vous !"
+  title: Des événements sur mesure,
+  title_highlight: dans la bonne humeur
+  description: >-
+    Les Fourneaux de Laurent vous accompagnent pour tous vos événements : entre
+    amis, en famille, ou entre collègues. L'esprit du sud-ouest, le partage, la
+    convivialité et la bonne humeur sont au rendez-vous !
 menu:
-  title: "Nos plats et menus savoureux"
-  description: "Savourez nos plats préparés avec des produits frais, locaux et faits maison : côte de bœuf, brochettes de poulet, légumes grillés, tapas, tartinades... Un festival de saveurs pour vos papilles !"
+  title: Nos plats et menus savoureux
+  description: >-
+    Savourez nos plats préparés avec des produits frais, locaux et faits maison
+    : onglet de bœuf, brochettes de poulet, légumes grillés, tapas,
+    tartinades... Un festival de saveurs pour vos papilles !
 final_cta:
-  title: "Prêt à régaler vos invités ?"
-  button_label: "Demandez un devis personnalisé"
-  button_href: "/contact-infos-et-reservations"
+  title: Prêt à régaler vos invités ?
+  button_label: Demandez un devis personnalisé
+  button_href: /contact-infos-et-reservations
