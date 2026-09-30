@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -32,6 +33,7 @@ export function ContactForm() {
           Evenement: target.event.value,
           Budget: target.budget.value,
           Message: target.message.value,
+          Consentement_RGPD: `Accepté le ${new Date().toLocaleString("fr-FR")}`,
           _subject: "Nouveau message depuis Les Fourneaux de Laurent !",
         })
       });
@@ -159,8 +161,26 @@ export function ContactForm() {
         ></textarea>
       </div>
 
-      <button 
-        type="submit" 
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          id="consent"
+          name="consent"
+          required
+          className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-primary"
+        />
+        <label htmlFor="consent" className="text-xs md:text-sm text-text-muted leading-snug cursor-pointer">
+          J&apos;accepte que les informations saisies soient utilisées pour répondre à ma demande et établir un devis. Pour en savoir plus
+          sur la gestion de vos données et vos droits, consultez notre{" "}
+          <Link href="/politique-de-confidentialite" target="_blank" className="text-primary underline hover:text-primary-dark">
+            politique de confidentialité
+          </Link>
+          .
+        </label>
+      </div>
+
+      <button
+        type="submit"
         disabled={status === "loading"}
         className="w-full bg-primary hover:bg-primary-dark text-surface font-bold py-3 md:py-4 rounded-lg md:rounded-xl transition-colors disabled:opacity-70 flex justify-center items-center text-base md:text-lg mt-2 md:mt-4 shadow-lg shadow-primary/20"
       >

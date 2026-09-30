@@ -113,6 +113,10 @@ export function Footer({ footerData }: { footerData?: { tagline?: string; locati
             <p className="text-border/60 text-[11px] sm:text-sm" suppressHydrationWarning>
               © 2025–{currentYear} Les Fourneaux de Laurent.
             </p>
+            <nav className="flex flex-row flex-wrap md:flex-col gap-x-4 gap-y-2 md:gap-1.5 text-[11px] sm:text-sm">
+              <Link href="/mentions-legales" className="text-border/80 hover:text-surface transition-colors">Mentions légales</Link>
+              <Link href="/politique-de-confidentialite" className="text-border/80 hover:text-surface transition-colors">Politique de confidentialité</Link>
+            </nav>
             <div className="pt-2 md:pt-2 border-t border-border/10">
               <p className="text-[10px] sm:text-xs text-border/40 italic leading-snug">
                 {legalText}
