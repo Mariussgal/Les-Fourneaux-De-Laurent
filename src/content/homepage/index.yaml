@@ -4,41 +4,49 @@ hero:
     à chaque bouchée.
   subline: |-
     Votre traiteur du Sud-Ouest en Île-de-France.
-    Produits frais, faits maison, esprit rugby.
-  ctaPrimaryLabel: "Réserver un événement"
-  ctaPrimaryHref: "/contact-infos-et-reservations"
-  ctaSecondaryLabel: "Voir les tarifs"
-  ctaSecondaryHref: "/tarifs"
+    Produits frais, faits maison, produits du terroir
+  ctaPrimaryLabel: Réserver un événement
+  ctaPrimaryHref: /contact-infos-et-reservations
+  ctaSecondaryLabel: Voir les tarifs
+  ctaSecondaryHref: /tarifs
 marquee:
-  - "Brasero"
-  - "Apéro dînatoire"
-  - "Produits du terroir"
-  - "Fait maison"
-  - "Esprit Sud-Ouest"
-  - "Convivialité"
-  - "Food Truck"
-  - "Événements sur mesure"
+  - Brasero
+  - Apéro dînatoire
+  - Produits du terroir
+  - Fait maison
+  - Esprit Sud-Ouest
+  - Convivialité
+  - Food Truck
+  - Événements sur mesure
 engagement:
-  title: "Notre engagement"
+  title: Notre engagement
   description: |-
     Chez Les Fourneaux de Laurent, la cuisine est un moment de partage,
     un reflet des valeurs du Sud-Ouest et de l'esprit du rugby :
     convivialité, générosité et authenticité. Chaque plat célèbre nos
     racines et rassemble autour de saveurs franches et sincères.
 services:
-  badge: "Nos services"
-  title: "Prestations sur mesure"
+  badge: Nos services
+  title: Prestations sur mesure
   cards:
-    - title: "Apéro dînatoire"
-      description: "Un assortiment gourmand de charcuteries fines, fromages artisanaux et pains variés pour un apéritif convivial et savoureux."
-    - title: "Brasero"
-      description: "Découvrez le brasero, élément indispensable pour vous réunir entre amis. Idéal pour la cuisson de la viande, du poisson, des légumes."
-    - title: "Options alternatives"
-      description: "Des créations culinaires pensées pour les régimes végétariens, vegan et autres préférences alimentaires, sans compromis sur le goût."
-    - title: "Desserts gourmands"
-      description: "Laissez-vous tenter par nos desserts gourmands, créés avec passion pour une touche sucrée et réconfortante en fin de repas."
+    - title: Apéro dînatoire
+      description: >-
+        Un assortiment gourmand de charcuteries fines, fromages artisanaux et
+        pains variés pour un apéritif convivial et savoureux.
+    - title: Brasero
+      description: >-
+        Découvrez le brasero, élément indispensable pour vous réunir entre amis.
+        Idéal pour la cuisson de la viande, du poisson, des légumes.
+    - title: Options alternatives
+      description: >-
+        Des créations culinaires pensées pour les régimes végétariens, vegan et
+        autres préférences alimentaires, sans compromis sur le goût.
+    - title: Desserts gourmands
+      description: >-
+        Laissez-vous tenter par nos desserts gourmands, créés avec passion pour
+        une touche sucrée et réconfortante en fin de repas.
 about:
-  title: "Qui est Laurent ?"
+  title: Qui est Laurent ?
   description: |-
     Derrière Les Fourneaux de Laurent se cache une passion pour la cuisine
     et le partage. Fort de son expérience, Laurent a créé ce service de traiteur
@@ -46,10 +54,10 @@ about:
     simplicité. Son approche est fondée sur la qualité des produits et un
     service personnalisé pour répondre à toutes vos envies.
 final_cta:
-  title: "Un moment qui vous ressemble"
+  title: Un moment qui vous ressemble
   description: |-
     Que vous soyez amateur de traditions, curieux de découvertes ou en
     quête d'alternatives, nous nous adaptons à vos envies. Notre cuisine
     est modulable, notre écoute est entière.
-  button_label: "Demandez un devis"
-  button_href: "/contact-infos-et-reservations"
+  button_label: Demandez un devis
+  button_href: /contact-infos-et-reservations
